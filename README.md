@@ -1,14 +1,4 @@
-.
-├── demos
-│   └── Nordic
-│       ├── patch
-│       ├── mible_std_authen
-│      	└── portable    
-├── libs
-│   ├── common
-│   └── mible_app_authen
-│   
-└── readme.md
+https://miecosystem.github.io/mijia_ble/
 
 #### How to use
 Nordic Platform:
