@@ -1,0 +1,3 @@
+nRF5 series examples support Segger Jlink Real-time terminal,
+for more details https://www.segger.com/products/debug-probes/j-link/technology/real-time-transfer/about-real-time-transfer/
+You can check the log information either by use Jlink RTT Viewer or by connecting via Telnet to an application which is using J-Link.

@@ -1,0 +1,15 @@
+
+
+*.TMP
+
+pca10040/
+pca10028/s130/arm5_no_packs/_build/
+*.scvd
+
+*.html
+
+*.uvguix.*
+
+pca10040/s132/arm5_no_packs/JLinkLog\.txt
+
+pca10028/s130/arm5_no_packs/JLinkLog\.txt

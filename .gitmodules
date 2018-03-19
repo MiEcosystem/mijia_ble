@@ -1,0 +1,6 @@
+[submodule "demos/Nordic/portable"]
+	path = demos/Nordic/portable
+	url = https://github.com/MiEcosystem/mijia_ble_api.git
+[submodule "libs/common"]
+	path = libs/common
+	url = https://github.com/MiEcosystem/mijia_ble_common.git
