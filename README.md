@@ -1,7 +1,12 @@
 此分支为米家蓝牙接入 Nordic52平台SDK。
+
 SDK中包含Nordic平台对米家蓝牙统一接口的适配、米家蓝牙标准认证库以及demo示例。
+
 关于米家蓝牙标准认证库的使用说明如下链接：https://miecosystem.github.io/mijia_ble/ 
+
 关于米家蓝牙统一接口的说明如下链接： https://miecosystem.github.io/mijia_ble_api/ ，此部分应用层不需关心。
+
+米家蓝牙标准认证库闭源，请联系 https://iot.mi.com/ 平台申请，详见https://iot.mi.com/guide.html#id=57
 
 #### How to use
 Nordic Platform:
