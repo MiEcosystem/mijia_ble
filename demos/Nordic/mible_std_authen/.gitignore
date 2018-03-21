@@ -2,7 +2,7 @@
 
 *.TMP
 
-pca10028/
+pca10028/s130/arm5_no_packs/JLinkLog\.txt
 *.scvd
 
 *.html
