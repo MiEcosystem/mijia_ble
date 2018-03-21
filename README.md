@@ -1,4 +1,8 @@
-此分支为米家蓝牙接入 Nordic52平台SDK。
+此分支为米家蓝牙接入 Nordic51/52平台的KEIL平台SDK。
+
+Nordic51工程路径：mijia_ble/demos/Nordic/mible_std_authen/pca10028/s130/arm5_no_packs/
+
+Nordic52工程路径：mijia_ble/demos/Nordic/mible_std_authen/pca10040/s132/arm5_no_packs/
 
 SDK中包含Nordic平台对米家蓝牙统一接口的适配、米家蓝牙标准认证库以及demo示例。
 
