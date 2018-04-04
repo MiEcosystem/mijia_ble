@@ -1,6 +1,8 @@
 libs/mible_app_authen/m*.c
 libs/mible_app_authen/*.lib
 **/build/
+**/debug/
+**/out/
 *.TMP
 *.uvguix.*
 **/JLinkLog\.txt
