@@ -14,13 +14,21 @@ How to use
 Nordic Platform:
 
 下载NXPQN908X在线生成的sdk： https://mcuxpresso.nxp.com/en/builder (芯片型号 QN980X; windows；keil平台)
+
 建议将SDK下载到硬盘根目录下，过长的目录会导致keil编译失败
+
 cd in SDK SDK_2.2_QN908XCDK_RC4 \boards\qn908xcdk\wireless_examples\bluetooth目录下
+
 $ git clone https://github.com/MiEcosystem/mijia_ble.git
+
 $ cd mijia_ble
+
 $ git checkout NXP
+
 $ git submodule init 
+
 $ git submodule update
+
 将从平台上申请得到的mijia_std_authen_keil_NXPQN980X.lib拷贝到mijia_ble\libs\mible_app_authen文件夹下
 
 修改SDK文件fw_symbols_mdk.h，添加一行：0x030254c5 A nvds_del
