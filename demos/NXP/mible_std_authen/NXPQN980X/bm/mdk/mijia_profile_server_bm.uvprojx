@@ -1679,9 +1679,24 @@
           <GroupName>mijia_ble_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_NXPQN980X.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_NXPQN980X.lib</FilePath>
+              <FileName>mible_crypto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_crypto.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_FSM.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_ll_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_ll_callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_server.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3359,9 +3374,24 @@
           <GroupName>mijia_ble_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_NXPQN980X.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_NXPQN980X.lib</FilePath>
+              <FileName>mible_crypto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_crypto.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_FSM.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_ll_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_ll_callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_server.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -8372,9 +8402,24 @@
           <GroupName>mijia_ble_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_NXPQN980X.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_NXPQN980X.lib</FilePath>
+              <FileName>mible_crypto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_crypto.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_FSM.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_ll_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_ll_callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mible_server.c</FilePath>
             </File>
           </Files>
         </Group>

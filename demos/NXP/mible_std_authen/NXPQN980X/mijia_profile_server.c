@@ -60,7 +60,7 @@
 #include "Panic.h"
 
 /* BLE Host Stack */
-#include "gatt_server_interface.h" 
+#include "gatt_server_interface.h"
 #include "gatt_client_interface.h"
 #include "gap_interface.h"
 #include "gatt_db_handles.h"
@@ -139,6 +139,8 @@ uint8_t gAppSerMgrIf;
 static advState_t  mAdvState;
 static bool_t      mRestartAdv;
 
+bleDeviceAddress_t   gBleDeviceAddress;
+
 /* Service Data*/
 //static bool_t           basValidClientList[gAppMaxConnections_c] = { FALSE };
 
@@ -200,7 +202,6 @@ void BleApp_Init(void)
 
     Serial_SetBaudRate(gAppSerMgrIf, gUARTBaudRate115200_c); 
     
-    mible_record_create(1, 2);
     MI_LOG_INFO("BleApp_Init()\r\n");
 }
 
@@ -388,6 +389,14 @@ void BleApp_HandleKeys(key_event_t events)
     }
 }
 
+static void get_address(gapGenericEvent_t* pGenericEvent)
+{
+    if (pGenericEvent->eventType == gPublicAddressRead_c)
+    {
+        /* Use address read from the controller */
+        FLib_MemCpy(gBleDeviceAddress, pGenericEvent->eventData.aAddress, sizeof(bleDeviceAddress_t));
+    }
+}
 /*! *********************************************************************************
 * \brief        Handles BLE generic callback.
 *
@@ -396,6 +405,7 @@ void BleApp_HandleKeys(key_event_t events)
 void BleApp_GenericCallback (gapGenericEvent_t* pGenericEvent)
 {
     /* Call BLE Conn Manager */
+    get_address(pGenericEvent);
     BleConnManager_GenericEvent(pGenericEvent);
     
     switch (pGenericEvent->eventType)

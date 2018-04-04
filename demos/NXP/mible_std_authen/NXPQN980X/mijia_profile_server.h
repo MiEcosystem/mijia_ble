@@ -37,6 +37,7 @@
 
 #ifndef _PRIVATE_PROFILE_SERVER_H_
 #define _PRIVATE_PROFILE_SERVER_H_
+#include "ble_general.h"
 /*************************************************************************************
 **************************************************************************************
 * Public macros
@@ -78,9 +79,12 @@
 extern "C" {
 #endif
 
+extern bleDeviceAddress_t   gBleDeviceAddress;
+
 void BleApp_Init(void);
 void BleApp_Start(void);
 void BleApp_GenericCallback (gapGenericEvent_t* pGenericEvent);
+    
 #ifdef __cplusplus
 }
 #endif 

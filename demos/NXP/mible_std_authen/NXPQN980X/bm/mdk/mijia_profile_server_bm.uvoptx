@@ -3331,12 +3331,48 @@
     <File>
       <GroupNumber>51</GroupNumber>
       <FileNumber>207</FileNumber>
-      <FileType>4</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_NXPQN980X.lib</PathWithFileName>
-      <FilenameWithoutPath>mijia_std_authen_keil_NXPQN980X.lib</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\libs\mible_app_authen\mible_crypto.c</PathWithFileName>
+      <FilenameWithoutPath>mible_crypto.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>51</GroupNumber>
+      <FileNumber>208</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\..\..\..\libs\mible_app_authen\mible_FSM.c</PathWithFileName>
+      <FilenameWithoutPath>mible_FSM.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>51</GroupNumber>
+      <FileNumber>209</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\..\..\..\libs\mible_app_authen\mible_ll_callback.c</PathWithFileName>
+      <FilenameWithoutPath>mible_ll_callback.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>51</GroupNumber>
+      <FileNumber>210</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\..\..\..\libs\mible_app_authen\mible_server.c</PathWithFileName>
+      <FilenameWithoutPath>mible_server.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
