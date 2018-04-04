@@ -1,0 +1,15 @@
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/config/ble_globals.c
+.\debug\ble_globals.o: ../../bm/app_preinclude.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/interface/ble_general.h
+.\debug\ble_globals.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Common/EmbeddedTypes.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/FunctionLib/FunctionLib.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/OSAbstraction/Interface/fsl_os_abstraction.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/OSAbstraction/Interface/fsl_os_abstraction_config.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/interface/ble_constants.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/interface/ble_utils.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/interface/ble_sig_defines.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/interface/att_errors.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/config/ble_config.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/bluetooth_1.5.3/host/interface/gap_types.h
+.\debug\ble_globals.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/ModuleInfo/ModuleInfo.h

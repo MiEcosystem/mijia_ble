@@ -1,0 +1,11 @@
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/MemManager/Source/MemManager.c
+.\debug\memmanager.o: ../../bm/app_preinclude.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Common/EmbeddedTypes.h
+.\debug\memmanager.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/OSAbstraction/Interface/fsl_os_abstraction.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/OSAbstraction/Interface/fsl_os_abstraction_config.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Panic/Interface/Panic.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/MemManager/Interface/MemManager.h
+.\debug\memmanager.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Lists/GenericList.h
+.\debug\memmanager.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/FunctionLib/FunctionLib.h

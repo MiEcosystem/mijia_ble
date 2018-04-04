@@ -1,0 +1,11 @@
+.\debug\sha256_hkdf.o: ..\..\..\..\..\..\libs\common\sha256_hkdf.c
+.\debug\sha256_hkdf.o: ../../bm/app_preinclude.h
+.\debug\sha256_hkdf.o: ..\..\..\..\..\..\libs\common\sha256_hkdf.h
+.\debug\sha256_hkdf.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\debug\sha256_hkdf.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\debug\sha256_hkdf.o: ../../../../portable/mible_log.h
+.\debug\sha256_hkdf.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\debug\sha256_hkdf.o: ../../../../portable/mible_port.h
+.\debug\sha256_hkdf.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/SerialManager/Interface/SerialManager.h
+.\debug\sha256_hkdf.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Common/EmbeddedTypes.h
+.\debug\sha256_hkdf.o: ../../../../portable/mible_log_internal.h

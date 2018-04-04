@@ -1,0 +1,9 @@
+.\debug\mible_api.o: ..\..\..\..\portable\mible_api.c
+.\debug\mible_api.o: ../../bm/app_preinclude.h
+.\debug\mible_api.o: ..\..\..\..\portable\mible_api.h
+.\debug\mible_api.o: ..\..\..\..\portable\mible_port.h
+.\debug\mible_api.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\debug\mible_api.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\debug\mible_api.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/SerialManager/Interface/SerialManager.h
+.\debug\mible_api.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Common/EmbeddedTypes.h
+.\debug\mible_api.o: ..\..\..\..\portable\mible_type.h

@@ -1,0 +1,12 @@
+.\debug\reset.o: ../../../../../../../../../../../middleware/wireless/framework_5.6.3/Reset/Reset.c
+.\debug\reset.o: ../../bm/app_preinclude.h
+.\debug\reset.o: ../../../../../../../../../../../devices/QN908XC/fsl_device_registers.h
+.\debug\reset.o: ../../../../../../../../../../../devices/QN908XC/QN908XC.h
+.\debug\reset.o: ../../../../../../../../../../../CMSIS/Include/core_cm4.h
+.\debug\reset.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\debug\reset.o: ../../../../../../../../../../../CMSIS/Include/core_cmInstr.h
+.\debug\reset.o: ../../../../../../../../../../../CMSIS/Include/cmsis_armcc.h
+.\debug\reset.o: ../../../../../../../../../../../CMSIS/Include/core_cmFunc.h
+.\debug\reset.o: ../../../../../../../../../../../CMSIS/Include/core_cmSimd.h
+.\debug\reset.o: ../../../../../../../../../../../devices/QN908XC/system_QN908XC.h
+.\debug\reset.o: ../../../../../../../../../../../devices/QN908XC/QN908XC_features.h
