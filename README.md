@@ -24,7 +24,7 @@ $ cd mijia_ble
 
 4、工程路径：6.0.6.427\projects\target_apps\ble_examples\mijia_app_authen\Keil_5 运行工程
 
-下载程序方式说明和其他开发资料可在https://support.dialog-semiconductor.com/中下载
+下载程序方式说明和其他开发资料可在https://support.dialog-semiconductor.com/ 中下载
 
 5、 关于米家蓝牙标准认证库的使用说明如下链接：https://miecosystem.github.io/mijia_ble/
 
