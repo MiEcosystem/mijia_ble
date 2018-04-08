@@ -13,7 +13,9 @@ https://support.dialog-semiconductor.com/
 2、下载米家标准认证示例demo
 
 cd in SDK 6.0.6.427\projects\target_apps\ble_examples目录下
+
 $  git clone -b Dialog --recursive https://github.com/MiEcosystem/mijia_ble.git
+
 $ cd mijia_ble
 
 3、将从米家开放平台上申请得到的mijia_std_authen_keil_DA14585.lib拷贝到mijia_ble\libs\mible_app_authen文件夹下
