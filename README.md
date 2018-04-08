@@ -22,11 +22,11 @@ $ cd mijia_ble
 
 米家蓝牙标准认证库闭源，请联系 https://iot.mi.com/ 平台申请，详见https://iot.mi.com/guide.html#id=57
 
-4、将mijia_ble\demos\Dialog\portable\sdk_overwrite文件夹下的文件替换SDK中的同名文件，替换的这几个文件与原官方提供的源文件差异只添加宏 (BLE_MIJIA_SERVER)囊括部分的代码。
+4、工程路径：6.0.6.427\projects\target_apps\ble_examples\mijia_app_authen\Keil_5 运行工程
 
-5、工程路径：6.0.6.427\projects\target_apps\ble_examples\mijia_app_authen\Keil_5 运行工程
+下载程序方式说明和其他开发资料可在https://support.dialog-semiconductor.com/中下载
 
-6、 关于米家蓝牙标准认证库的使用说明如下链接：https://miecosystem.github.io/mijia_ble/
+5、 关于米家蓝牙标准认证库的使用说明如下链接：https://miecosystem.github.io/mijia_ble/
 
 工程中mijia_ble\demos\Dialog\mible_std_authen\Dialog14585\src\user为调用示例
 
