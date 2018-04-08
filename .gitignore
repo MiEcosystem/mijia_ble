@@ -1,0 +1,5 @@
+libs/mible_app_authen/m*.c
+libs/mible_app_authen/*.lib
+**/out_585/
+**/JLinkLog.txt
+**/*.uvguix.*
