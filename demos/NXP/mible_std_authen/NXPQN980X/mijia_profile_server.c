@@ -139,7 +139,7 @@ uint8_t gAppSerMgrIf;
 static advState_t  mAdvState;
 static bool_t      mRestartAdv;
 
-bleDeviceAddress_t   gBleDeviceAddress;
+bleDeviceAddress_t   gBleDeviceAddress = "\x00\x00\x00\x00\x00\x00";
 
 /* Service Data*/
 //static bool_t           basValidClientList[gAppMaxConnections_c] = { FALSE };
@@ -178,6 +178,9 @@ static void Mibeacon_Advertise(void);
 ************************************************************************************/
 extern void mible_ConnectionCallback (deviceId_t peerDeviceId, gapConnectionEvent_t* pConnectionEvent);
 extern void mible_GattServerCallback (deviceId_t deviceId, gattServerEvent_t* pServerEvent);
+
+extern uint16_t HandlesForWriteNotifications[];
+extern uint8_t NumOfHandlesForWriteNotifications;
 
 /*app variable*/
 device_info dev_info = {
@@ -389,39 +392,49 @@ void BleApp_HandleKeys(key_event_t events)
     }
 }
 
-static void get_address(gapGenericEvent_t* pGenericEvent)
-{
-    if (pGenericEvent->eventType == gPublicAddressRead_c)
-    {
-        /* Use address read from the controller */
-        FLib_MemCpy(gBleDeviceAddress, pGenericEvent->eventData.aAddress, sizeof(bleDeviceAddress_t));
-    }
-}
 /*! *********************************************************************************
 * \brief        Handles BLE generic callback.
 *
 * \param[in]    pGenericEvent    Pointer to gapGenericEvent_t.
-********************************************************************************** */
+***********************************************************************************/
 void BleApp_GenericCallback (gapGenericEvent_t* pGenericEvent)
 {
     /* Call BLE Conn Manager */
-    get_address(pGenericEvent);
     BleConnManager_GenericEvent(pGenericEvent);
     
     switch (pGenericEvent->eventType)
     {
-        case gInitializationComplete_c:    
+        case gInitializationComplete_c:
         {
             BleApp_Config();
         }
         break;
-        
+        case gPublicAddressRead_c:
+        {
+            if(0 != FLib_MemCmp(gBleDeviceAddress, "\x00\x00\x00\x00\x00\x00", sizeof(bleDeviceAddress_t)))
+            {
+                FLib_MemCpy(gBleDeviceAddress, pGenericEvent->eventData.aAddress, sizeof(bleDeviceAddress_t));
+                mible_server_info_init(&dev_info);
+                mible_server_miservice_init();
+                Mibeacon_Set_AdvData();
+                
+                /* Register for callbacks*/
+                GattServer_RegisterHandlesForWriteNotifications(NumOfHandlesForWriteNotifications, HandlesForWriteNotifications);//(NumberOfElements(cpHandles), cpHandles);
+                App_RegisterGattServerCallback(BleApp_GattServerCallback);
+
+                mAdvState.advOn = FALSE;
+                for (uint8_t i = 0; i < gAppMaxConnections_c; i++)
+                {
+                    mPeerInformation[i].deviceId= gInvalidDeviceId_c;
+                }
+            }
+        }
+        break;
         case gAdvertisingParametersSetupComplete_c:
         {
             App_StartAdvertising(BleApp_AdvertisingCallback, BleApp_ConnectionCallback);
         }
-        break;         
-
+        break;
         default: 
             break;
     }
@@ -438,34 +451,11 @@ void BleApp_GenericCallback (gapGenericEvent_t* pGenericEvent)
 *               configuring advertising, scanning, white list, services, et al.
 *
 ********************************************************************************** */
-extern uint16_t HandlesForWriteNotifications[];
-extern uint8_t NumOfHandlesForWriteNotifications;
 static void BleApp_Config()
 {
     /* Configure as GAP peripheral */
 //    BleConnManager_GapPeripheralConfig();
-   
-    mible_server_info_init(&dev_info);
-	mible_server_miservice_init();
-    Mibeacon_Set_AdvData();
-	
-//    for(uint8_t i; i < NumberOfElements(cpHandles); i++)
-//    {
-//        HandlesForWriteNotifications[NumOfHandlesForWriteNotifications++] = cpHandles[i];
-//    }
-    
-    /* Register for callbacks*/
-    GattServer_RegisterHandlesForWriteNotifications(NumOfHandlesForWriteNotifications, HandlesForWriteNotifications);//(NumberOfElements(cpHandles), cpHandles);
-    App_RegisterGattServerCallback(BleApp_GattServerCallback);
-
-    mAdvState.advOn = FALSE;
-    for (uint8_t i = 0; i < gAppMaxConnections_c; i++)
-    {
-        mPeerInformation[i].deviceId= gInvalidDeviceId_c;
-    }
-
-
-    /* Allocate application timers */
+    Gap_ReadPublicDeviceAddress(); 
 }
 
 
