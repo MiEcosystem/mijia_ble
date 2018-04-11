@@ -96,7 +96,7 @@
 #include "mible_beacon.h"
 #include "mi_config.h"
 
-#define APP_PRODUCT_ID                  0x01CF            // Xiaomi Secure BLE dev board
+
 
 #define RTT_CTRL_CLEAR                  "[2J"
 #define IS_SRVC_CHANGED_CHARACT_PRESENT 1                                           /**< Include or not the service_changed characteristic. if not enabled, the server's database cannot be changed for the lifetime of the device*/
@@ -140,9 +140,9 @@
 
 /*app variable*/
 device_info dev_info = {
-		.bonding = STRONG_BONDING,
-		.pid = 0x9c,
-		.version = "0000",
+		.bonding = STRONG_BONDING, // can be modified according to product
+		.pid = 0x9c, // product id, can be modified according to product
+		.version = "0000",  // can be modified according to product
 };
 
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                            /**< Handle of the current connection. */
