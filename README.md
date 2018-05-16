@@ -36,4 +36,4 @@ $ cd mijia_ble
 dialog DA14585 没有内部的FLASH可供使用，代码可放置在片外的存储中或者是片内的OTP(64KByte)。片外存储可以选择EEprom、FLASH，绝大部分客户使用FLASH,官方EEprom默认支持使用IIC通信，FLASH默认支持使用SPI通信，在通信速率和价格上，使用FLASH价格会比EEprom便宜、和快速。由于米家接口的支持需要使用到存储信息,故建议使用外挂的FLASH作为存储。如果使用dialog DA14586待内置存储的需要对应修改。使用dialog DA14586内置Flash会比dialog DA14585 + 片外FLASH会贵一些。这里只提供DA14585 的米家服务的示例，如果需要使用到586芯片可自行移植flash存储部分或者找芯片厂商或者代理商支持。
 
 #### 内存问题
-米家服务使用了动态申请内存,  在下载官网skd后 注意调整startup_ARMCM0.S  文件中 Heap_Size       EQU     0x00000400
+米家服务使用了动态申请内存,  在下载官网skd后 注意调整boot_vector.s  文件中 Heap_Size       EQU     0x00000400
