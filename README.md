@@ -9,7 +9,7 @@ https://community.cypress.com/servlet/JiveServlet/downloadBody/14679-102-2-16278
 2、下载米家标准认证示例demo
 
 2.1  
-$ git clone -b Cypress --recursive https://github.com/MiEcosystem/mijia_ble.git
+$ git clone -b cypress --recursive https://github.com/MiEcosystem/mijia_ble.git
 
 2.2 
 放到WICED-Studio-6.1 \20706-A2_Bluetooth\apps\demo\
