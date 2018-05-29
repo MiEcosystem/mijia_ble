@@ -3,4 +3,4 @@
 	url = https://github.com/MiEcosystem/mijia_ble_common.git
 [submodule "demos/Cypress/portable"]
 	path = demos/Cypress/portable
-	urn = https://github.com/MiEcosystem/mijia_ble_api.git
+	url = https://github.com/MiEcosystem/mijia_ble_api.git
