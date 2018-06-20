@@ -1,6 +1,6 @@
 [submodule "libs/common"]
 	path = libs/common
 	url = https://github.com/MiEcosystem/mijia_ble_common.git
-[submodule "demos/NXP/portable"]
-	path = demos/NXP/portable
+[submodule "demos/NXP_QN908X/portable"]
+	path = demos/NXP_QN908X/portable
 	url = https://github.com/MiEcosystem/mijia_ble_api.git
