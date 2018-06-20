@@ -27,7 +27,7 @@ extern uint16_t mible_server_connection_handle;
  * */
 typedef enum{
 	STRONG_BONDING,
-	WEAK_BONDIND,
+	WEAK_BONDING,
 }mible_gatts_bonding_property;
 
 

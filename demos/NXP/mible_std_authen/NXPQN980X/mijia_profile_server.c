@@ -184,8 +184,8 @@ extern uint8_t NumOfHandlesForWriteNotifications;
 
 /*app variable*/
 device_info dev_info = {
-		.bonding = STRONG_BONDING,
-		.pid = 0x9c,
+		.bonding = WEAK_BONDING,
+		.pid = 156,
 		.version = "0000",
 };
 /*! *********************************************************************************
