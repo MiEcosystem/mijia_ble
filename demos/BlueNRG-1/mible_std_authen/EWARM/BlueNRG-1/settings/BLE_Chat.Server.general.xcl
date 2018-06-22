@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armstlink2.dll" 
+
+"C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\mijia_ble\demos\BlueNRG-1\mible_std_authen\EWARM\BlueNRG-1\Server\Exe\BlueNRG-1_BLE_Chat_Server.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
+
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\config\flashloader\ST\BlueNRG-1.board" 
+
+
+
+
