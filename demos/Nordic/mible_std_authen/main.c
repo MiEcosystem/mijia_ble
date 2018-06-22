@@ -140,7 +140,7 @@
 
 /*app variable*/
 device_info dev_info = {
-		.bonding = STRONG_BONDING, // can be modified according to product
+		.bonding = WEAK_BONDING, // can be modified according to product
 		.pid = 0x9c, // product id, can be modified according to product
 		.version = "0000",  // can be modified according to product
 };

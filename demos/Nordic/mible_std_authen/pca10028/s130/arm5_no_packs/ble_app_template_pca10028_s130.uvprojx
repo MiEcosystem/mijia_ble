@@ -500,9 +500,9 @@
           <GroupName>mijia_std_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_M0_keil1.0.lib</FileName>
+              <FileName>mijia_std_authen_keil_nrf51_1_1_2.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_M0_keil1.0.lib</FilePath>
+              <FilePath>..\..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_nrf51_1_1_2.lib</FilePath>
             </File>
           </Files>
         </Group>
