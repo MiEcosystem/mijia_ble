@@ -11,12 +11,16 @@ static void advertising_init(void);
 static void advertising_start(void);
 /*app variable*/
 device_info dev_info = {
-	.bonding = STRONG_BONDING,
-	.pid = 156,
+	.bonding = WEAK_BONDING,
+	.pid = 0x9c,
 	.version = "4321",
 };
 
-
+//device_info dev_info = {
+//	.bonding = STRONG_BONDING,
+//	.pid = 930,
+//	.version = "4321",
+//};
 
 void simulation_miserver_test(void)
 {
@@ -128,3 +132,70 @@ void advertising_start(void){
         return;
     }
 }
+//static void advertising_start(void)
+//{
+
+//	MI_LOG_INFO("advertising_start\r\n");
+//	mibeacon_frame_ctrl_t frame_ctrl = {
+//	.time_protocol = 0,
+//	.is_encrypt = 0,
+//	.mac_include = 1,
+//	.cap_include = 1,
+//	.obj_include = 0,
+//	.bond_confirm = 0,
+//	.version = 0x03,
+//	};
+//	mibeacon_capability_t cap = {.connectable = 1,
+//	                             .encryptable = 1,
+//	                             .bondAbility = 1};
+
+//	
+//	mible_addr_t dev_mac;
+//	mible_gap_address_get(dev_mac);
+//	
+//	mibeacon_config_t mibeacon_cfg = {
+//	.frame_ctrl = frame_ctrl,
+//	.pid =dev_info.pid,
+//	.p_mac = (mible_addr_t*)dev_mac, 
+//	.p_capability = &cap,
+//	.p_obj = NULL,
+//	};
+//	
+//	uint8_t service_data[25];
+//	uint8_t service_data_len=0;
+//	
+////	mible_gap_adv_param_t adv_param =(mible_gap_adv_param_t){
+////		.adv_data = "",
+////		.adv_len = 0,
+////		.scan_rsp_data = "",
+////		.scan_rsp_len = 0,
+////		.adv_type = MIBLE_ADV_TYPE_CONNECTABLE_UNDIRECTED,
+////		.adv_interval_min = 0x00a0,
+////		.adv_interval_max = 0x00b0,
+////		.ch_mask = {0},
+////	};
+//	
+//	if(MI_SUCCESS != mibeacon_service_data_set(&mibeacon_cfg, service_data, &service_data_len)){
+//		MI_LOG_ERROR("mibeacon_data_set failed. \r\n");
+//		return;
+//	}
+
+//	if(MI_SUCCESS != mible_adv_data_set(service_data, service_data_len, 0x06, adv_param.adv_data, &adv_param.adv_len)){
+//		MI_LOG_ERROR("mible_adv_data_set failed. \r\n");
+//		return;
+//	}	
+
+//	adv_param.adv_len -= 3;
+//	for(uint8_t i=0;i<adv_param.adv_len;i++){
+//		adv_param.adv_data[i] = adv_param.adv_data[i+3];
+//	}
+
+//	
+//	if(MI_SUCCESS != mible_gap_adv_start(&adv_param)){
+//		MI_LOG_ERROR("mible_gap_adv_start failed. \r\n");
+//		return;
+//	}
+
+//	return;
+//	
+//}

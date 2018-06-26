@@ -56,15 +56,15 @@ static const struct app_suotar_cb user_app_suotar_cb = {
 #endif // BLE_SUOTA_RECEIVER
 
 static const struct app_callbacks user_app_callbacks = {
-    .app_on_connection                  = user_app_on_connection,//default_app_on_connection,
+    .app_on_connection                  = user_app_on_connection,
     .app_on_disconnect                  = user_app_on_disconnect,
     .app_on_update_params_rejected      = NULL,
     .app_on_update_params_complete      = NULL,
     .app_on_set_dev_config_complete     = default_app_on_set_dev_config_complete,
     .app_on_adv_nonconn_complete        = NULL,
     .app_on_adv_undirect_complete       = app_advertise_complete,
-    .app_on_adv_direct_complete         = NULL,//user_app_on_db_init_complete,//
-    .app_on_db_init_complete            =  user_app_on_db_init_complete,//default_app_on_db_init_complete,
+    .app_on_adv_direct_complete         = NULL,
+    .app_on_db_init_complete            = user_app_on_db_init_complete,
     .app_on_scanning_completed          = NULL,
     .app_on_adv_report_ind              = NULL,
     .app_on_get_dev_appearance          = default_app_on_get_dev_appearance,

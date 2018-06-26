@@ -1,7 +1,8 @@
-;#<FEEDBACK># ARM Linker, 5060422: Last Updated: Sun Apr 08 10:43:13 2018
+;#<FEEDBACK># ARM Linker, 5060422: Last Updated: Tue Jun 26 10:57:30 2018
 ;VERSION 0.2
 ;FILE adc.o
 adc_calibrate <= USED 0
+adc_disable <= USED 0
 ;FILE aes.o
 aes_init <= USED 0
 aes_operation <= USED 0
@@ -50,8 +51,6 @@ default_app_on_db_init_complete <= USED 0
 default_app_on_disconnect <= USED 0
 default_app_on_encrypt_req_ind <= USED 0
 default_app_on_pairing_succeeded <= USED 0
-;FILE app_diss.o
-;FILE app_diss_task.o
 ;FILE app_easy_msg_utils.o
 app_easy_msg_free_callback <= USED 0
 app_easy_msg_modify <= USED 0
@@ -87,27 +86,26 @@ app_easy_timer_modify <= USED 0
 ;FILE app_entry_point.o
 ;FILE app_mijia.o
 ;FILE app_mijia_task.o
-app_mijia_enable_ind_handler <= USED 0
-app_mijia_process_handler <= USED 0
-app_mijia_send_data_handler <= USED 0
-app_mijia_send_indication_cfm_handler <= USED 0
 ;FILE app_msg_utils.o
 app_msg_send_wakeup_ble <= USED 0
 ;FILE app_security.o
 app_sec_gen_csrk <= USED 0
 app_sec_gen_tk <= USED 0
 ;FILE app_security_task.o
+;FILE app_sps.o
+app_sps_init <= USED 0
+ble_sps_send_data <= USED 0
+;FILE app_sps_task.o
 ;FILE app_task.o
 ;FILE app_utils.o
 app_get_address_type <= USED 0
+;FILE arch_console.o
+arch_puts <= USED 0
 ;FILE arch_main.o
 ;FILE arch_rom.o
 ;FILE arch_sleep.o
 arch_ble_ext_wakeup_off <= USED 0
-arch_force_active_mode <= USED 0
-arch_get_sleep_mode <= USED 0
 arch_last_rwble_evt_get <= USED 0
-arch_restore_sleep_mode <= USED 0
 arch_set_deep_sleep <= USED 0
 ;FILE arch_system.o
 __ARM_common_ll_muluu <= USED 0
@@ -151,7 +149,6 @@ mible_iic_uninit <= USED 0
 mible_record_delete <= USED 0
 mible_tasks_exec <= USED 0
 mible_timer_delete <= USED 0
-;FILE diss.o
 ;FILE easy_msg.o
 ;FILE easy_nvds.o
 db_clear_flash <= USED 0
@@ -200,6 +197,7 @@ i2c_wait_until_eeprom_ready <= USED 0
 dummyf <= USED 0
 ;FILE mi_app_customs.o
 mijia_get_att_handle <= USED 0
+sps_get_att_handle <= USED 0
 ;FILE mi_attm_db_128.o
 ;FILE mible_api.o
 mible_gattc_event_callback <= USED 0
@@ -208,7 +206,6 @@ mible_gattc_register <= USED 0
 mibeacon_obj_enque <= USED 0
 ;FILE mible_crypto.o
 ;FILE mible_fsm.o
-mible_FSM_get <= USED 0
 ;FILE mible_ll_callback.o
 mible_std_gattc_event_handler <= USED 0
 ;FILE mible_server.o
@@ -248,6 +245,7 @@ enqueue <= USED 0
 ;FILE rf_585.o
 rf_nfm_disable <= USED 0
 rf_nfm_enable <= USED 0
+rf_nfm_is_enabled <= USED 0
 ;FILE rf_calibration.o
 DCoffsetCalibration_580 <= USED 0
 IffCalibration_580 <= USED 0
@@ -291,6 +289,8 @@ spi_flash_write_enable_volatile <= USED 0
 spi_flash_write_status_reg <= USED 0
 spi_read_flash_memory_man_and_dev_id <= USED 0
 spi_read_flash_unique_id <= USED 0
+;FILE sps.o
+;FILE sps_task.o
 ;FILE sw_aes.o
 AES_cbc_decrypt <= USED 0
 AES_cbc_encrypt <= USED 0
@@ -302,15 +302,18 @@ syscntl_set_dcdc_vbat3v_level <= USED 0
 SystemCoreClockUpdate <= USED 0
 ;FILE trng.o
 ;FILE uart2.o
-uart2_finish_transfers <= USED 0
 uart2_flow_off <= USED 0
 uart2_flow_on <= USED 0
 uart2_read <= USED 0
 uart2_set_flow_off_retries_limit <= USED 0
-uart2_write <= USED 0
 ;FILE uart2_sync.o
+uart2_putc <= USED 0
+uart2_send <= USED 0
+uart2_wait_end_of_tx <= USED 0
 uart2_write_nbyte <= USED 0
+uart2_write_str <= USED 0
 ;FILE user_app_authen.o
+app_button_enable <= USED 0
 ;FILE user_default_handlers.o
 app_on_update_params_rejected <= USED 0
 ;FILE user_mijia_ble.o

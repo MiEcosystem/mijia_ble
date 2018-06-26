@@ -88,8 +88,8 @@
         <sRmem>1</sRmem>
         <sRfunc>1</sRfunc>
         <sRbox>1</sRbox>
-        <tLdApp>0</tLdApp>
-        <tGomain>0</tGomain>
+        <tLdApp>1</tLdApp>
+        <tGomain>1</tGomain>
         <tRbreak>1</tRbreak>
         <tRwatch>1</tRwatch>
         <tRmem>1</tRmem>
@@ -118,7 +118,6 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>p?</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -138,7 +137,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>JL2CM3</Key>
-          <Name>-U36410082 -O78 -S2 -ZTIFSpeedSel5000 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(0BB11477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO7 -FD20000000 -FC1000 -FN1 -FF0NEW_DEVICE.FLM -FS00 -FL040000 -FP0($$Device:ARMCM0$Device\ARM\Flash\NEW_DEVICE.FLM)</Name>
+          <Name>-U36410082 -O78 -S2 -ZTIFSpeedSel5000 -A0 -C0 -JU1 -JI-JP0 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(0BB11477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO7 -FD20000000 -FC1000 -FN1 -FF0NEW_DEVICE.FLM -FS00 -FL040000 -FP0($$Device:ARMCM0$Device\ARM\Flash\NEW_DEVICE.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -151,39 +150,29 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>s_pserver_db</ItemText>
+          <ItemText>service_handle</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>p_server_db</ItemText>
+          <ItemText>p_mi_char</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>pchar</ItemText>
+          <ItemText>srv_init_cmp</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>cmd</ItemText>
-        </Ww>
-        <Ww>
-          <count>4</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>p_server_db</ItemText>
-        </Ww>
-        <Ww>
-          <count>5</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>mijia_att_db</ItemText>
+          <ItemText>gatts_param</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>1</SubType>
-          <ItemText>0x07FC9128</ItemText>
+          <ItemText>0x07FCD068</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
@@ -381,6 +370,22 @@
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>445</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>D:\workspace\ble\DA14585\6.0.6.427\6.0.6.427\projects\target_apps\ble_examples\mijia_ble\libs\mible_app_authen\mible_server.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
@@ -455,7 +460,7 @@
 
   <Group>
     <GroupName>sdk_boot</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -502,7 +507,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\..\..\..\sdk\platform\arch\boot\rvds\boot_vectors.s</PathWithFileName>
+      <PathWithFileName>..\..\..\portable\sdk_overwriter\boot_vectors.s</PathWithFileName>
       <FilenameWithoutPath>boot_vectors.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -511,7 +516,7 @@
 
   <Group>
     <GroupName>sdk_arch</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -627,7 +632,7 @@
 
   <Group>
     <GroupName>sdk_driver</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -767,7 +772,7 @@
 
   <Group>
     <GroupName>sdk_ble</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -811,7 +816,7 @@
 
   <Group>
     <GroupName>sdk_profiles</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -963,7 +968,7 @@
 
   <Group>
     <GroupName>sdk_app</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1202,7 +1207,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_entry\app_entry_point.c</PathWithFileName>
+      <PathWithFileName>..\..\..\portable\sdk_overwriter\app_entry_point.c</PathWithFileName>
       <FilenameWithoutPath>app_entry_point.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1223,7 +1228,7 @@
 
   <Group>
     <GroupName>sdk_crypto</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1279,7 +1284,7 @@
 
   <Group>
     <GroupName>user_config</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1371,7 +1376,7 @@
 
   <Group>
     <GroupName>user_platform</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1391,7 +1396,7 @@
 
   <Group>
     <GroupName>user_app</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1411,7 +1416,7 @@
 
   <Group>
     <GroupName>DA14585_mible_api</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1622,7 +1627,8 @@
   </Group>
 
   <Group>
-    <GroupName>mible_authen_app</GroupName>
+    <GroupName>
+mible_authen_app</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -1634,8 +1640,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_DA14585.lib</PathWithFileName>
-      <FilenameWithoutPath>mijia_std_authen_keil_DA14585.lib</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_DA14585_1_1_2.lib</PathWithFileName>
+      <FilenameWithoutPath>mijia_std_authen_keil_DA14585_1_1_2.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1712,6 +1718,62 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\user\user_mijia_ble.c</PathWithFileName>
       <FilenameWithoutPath>user_mijia_ble.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>user_sps</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>97</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\portable\app_sps.c</PathWithFileName>
+      <FilenameWithoutPath>app_sps.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>98</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\portable\app_sps_task.c</PathWithFileName>
+      <FilenameWithoutPath>app_sps_task.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>99</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\portable\sps.c</PathWithFileName>
+      <FilenameWithoutPath>sps.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>100</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\portable\sps_task.c</PathWithFileName>
+      <FilenameWithoutPath>sps_task.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

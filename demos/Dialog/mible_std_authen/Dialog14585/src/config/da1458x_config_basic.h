@@ -65,14 +65,16 @@
 /* controls the uart module used. If it is defined UART2 is used. If not, UART is used. uart or uart2 driver    */
 /* must be included in project respectively.                                                                    */
 /****************************************************************************************************************/
-#define nCFG_PRINTF
+
+//异步打印宏
+#define CFG_PRINTF
 
 #ifdef CFG_PRINTF
     #define CFG_PRINTF_UART2
 #endif
 
-
-#define CFG_SYNC_PRINTF
+//同步打印宏
+#define nCFG_SYNC_PRINTF
 
 
 #ifdef CFG_SYNC_PRINTF

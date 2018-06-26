@@ -73,7 +73,7 @@
 // #define ENV_HEAP_SZ             4928
 // #define MSG_HEAP_SZ             6880
 // #define NON_RET_HEAP_SZ         2048
-#define NON_RET_HEAP_SZ         (1024 * 20)
+//#define NON_RET_HEAP_SZ         (1024 * 20)
 
 /****************************************************************************************************************/
 /* NVDS configuration                                                                                           */

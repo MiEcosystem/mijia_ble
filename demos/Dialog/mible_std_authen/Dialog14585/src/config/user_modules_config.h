@@ -55,6 +55,7 @@
 #define EXCLUDE_DLG_CUSTS1          (0)
 #define EXCLUDE_DLG_CUSTS2          (0)
 #define EXCLUDE_DLG_MIJIA			(0)
+#define EXCLUDE_DLG_SPS							(0)
 
 
 /// @} APP

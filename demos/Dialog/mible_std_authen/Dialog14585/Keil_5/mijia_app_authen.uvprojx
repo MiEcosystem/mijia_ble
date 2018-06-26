@@ -48,7 +48,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out_585\</OutputDirectory>
-          <OutputName>prox_reporter_585</OutputName>
+          <OutputName>mijia_app_authen</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -310,7 +310,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>0</OneElfS>
@@ -335,7 +335,7 @@
               <MiscControls>--thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused_585.txt"</MiscControls>
               <Define>MI_LOG_ENABLED</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\portable\sdk_overwriter;..\..\..\..\..\..\..\..\..\sdk\platform\include;..\..\..\..\..\..\..\..\..\sdk\app_modules\api;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_bass;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_diss;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_proxr;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_suotar;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\em;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\llc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\lld;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\llm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hcic;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hcih;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att\attc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att\attm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att\atts;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gap;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gap\gapc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gap\gapm;..\..\..\..\..\..\..\..\..\sdk\common_project_files;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gatt;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gatt\gattc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gatt\gattm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\l2c\l2cc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\l2c\l2cm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\smp\smpc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\smp\smpm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\smp;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\bas\bass\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\dis\diss\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\prox\proxr\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\suota\suotar\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\rwble;..\..\..\..\..\..\..\..\..\sdk\ble_stack\rwble_hl;..\..\..\..\..\..\..\..\..\sdk\ble_stack\ea\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\em\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hci\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hci\src;..\..\..\..\..\..\..\..\..\sdk\common_project_files;..\..\..\..\..\..\..\..\..\sdk\platform\arch;..\..\..\..\..\..\..\..\..\sdk\platform\arch\boot\rvds;..\..\..\..\..\..\..\..\..\sdk\platform\arch\compiler\rvds;..\..\..\..\..\..\..\..\..\sdk\platform\arch\ll\rvds;..\..\..\..\..\..\..\..\..\sdk\platform\arch\main;..\..\..\..\..\..\..\..\..\sdk\platform\arch;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\arch_console;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\common\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\crypto;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\dbg\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\gtl\src;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\ke\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\ke\src;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\nvds\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\rf\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\gtl\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\rwip\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\wlan_coex;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\h4tl\api;..\..\..\..\..\..\..\..\..\sdk\platform\driver\adc;..\..\..\..\..\..\..\..\..\sdk\platform\driver\battery;..\..\..\..\..\..\..\..\..\sdk\platform\driver\gpio;..\..\..\..\..\..\..\..\..\sdk\platform\driver\i2c_eeprom;..\..\..\..\..\..\..\..\..\sdk\platform\driver\reg;..\..\..\..\..\..\..\..\..\sdk\platform\driver\spi;..\..\..\..\..\..\..\..\..\sdk\platform\driver\spi_flash;..\..\..\..\..\..\..\..\..\sdk\platform\driver\syscntl;..\..\..\..\..\..\..\..\..\sdk\platform\driver\systick;..\..\..\..\..\..\..\..\..\sdk\platform\driver\trng;..\..\..\..\..\..\..\..\..\sdk\platform\driver\uart;..\..\..\..\..\..\..\..\..\sdk\platform\driver\wkupct_quadec;..\..\..\..\..\..\..\..\..\sdk\platform\driver\ble;..\..\..\..\..\..\..\..\..\sdk\platform\driver\emi;..\..\..\..\..\..\..\..\..\sdk\platform\driver\intc;..\..\..\..\..\..\..\..\..\sdk\platform\driver\hw_otpc;..\..\..\..\..\..\..\..\..\sdk\platform\driver\dma;..\..\..\..\..\..\..\..\..\sdk\platform\driver\pdm;.\..\src\config;.\..\src;..\..\..\..\..\..\..\..\..\sdk\platform\system_library\include;..\..\..\..\..\..\..\..\..\third_party\rand;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\custom;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_custs;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\crypto;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\custom\custs\api;..\src\common;..\..\..\..\..\libs\common;..\..\..\..\..\libs\mible_app_authen;..\..\..\portable</IncludePath>
+              <IncludePath>..\..\..\portable\sdk_overwriter;..\..\..\..\..\..\..\..\..\sdk\platform\include;..\..\..\..\..\..\..\..\..\sdk\app_modules\api;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_bass;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_diss;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_proxr;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_suotar;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\em;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\llc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\lld;..\..\..\..\..\..\..\..\..\sdk\ble_stack\controller\llm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hcic;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hcih;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att\attc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att\attm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\att\atts;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gap;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gap\gapc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gap\gapm;..\..\..\..\..\..\..\..\..\sdk\common_project_files;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gatt;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gatt\gattc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\gatt\gattm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\l2c\l2cc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\l2c\l2cm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\smp\smpc;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\smp\smpm;..\..\..\..\..\..\..\..\..\sdk\ble_stack\host\smp;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\bas\bass\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\dis\diss\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\prox\proxr\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\suota\suotar\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\rwble;..\..\..\..\..\..\..\..\..\sdk\ble_stack\rwble_hl;..\..\..\..\..\..\..\..\..\sdk\ble_stack\ea\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\em\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hci\api;..\..\..\..\..\..\..\..\..\sdk\ble_stack\hci\src;..\..\..\..\..\..\..\..\..\sdk\common_project_files;..\..\..\..\..\..\..\..\..\sdk\platform\arch;..\..\..\..\..\..\..\..\..\sdk\platform\arch\boot\rvds;..\..\..\..\..\..\..\..\..\sdk\platform\arch\compiler\rvds;..\..\..\..\..\..\..\..\..\sdk\platform\arch\ll\rvds;..\..\..\..\..\..\..\..\..\sdk\platform\arch\main;..\..\..\..\..\..\..\..\..\sdk\platform\arch;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\arch_console;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\common\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\crypto;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\dbg\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\gtl\src;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\ke\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\ke\src;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\nvds\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\rf\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\gtl\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\rwip\api;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\wlan_coex;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\h4tl\api;..\..\..\..\..\..\..\..\..\sdk\platform\driver\adc;..\..\..\..\..\..\..\..\..\sdk\platform\driver\battery;..\..\..\..\..\..\..\..\..\sdk\platform\driver\gpio;..\..\..\..\..\..\..\..\..\sdk\platform\driver\i2c_eeprom;..\..\..\..\..\..\..\..\..\sdk\platform\driver\reg;..\..\..\..\..\..\..\..\..\sdk\platform\driver\spi;..\..\..\..\..\..\..\..\..\sdk\platform\driver\spi_flash;..\..\..\..\..\..\..\..\..\sdk\platform\driver\syscntl;..\..\..\..\..\..\..\..\..\sdk\platform\driver\systick;..\..\..\..\..\..\..\..\..\sdk\platform\driver\trng;..\..\..\..\..\..\..\..\..\sdk\platform\driver\uart;..\..\..\..\..\..\..\..\..\sdk\platform\driver\wkupct_quadec;..\..\..\..\..\..\..\..\..\sdk\platform\driver\ble;..\..\..\..\..\..\..\..\..\sdk\platform\driver\emi;..\..\..\..\..\..\..\..\..\sdk\platform\driver\intc;..\..\..\..\..\..\..\..\..\sdk\platform\driver\hw_otpc;..\..\..\..\..\..\..\..\..\sdk\platform\driver\dma;..\..\..\..\..\..\..\..\..\sdk\platform\driver\pdm;.\..\src\config;.\..\src;..\..\..\..\..\..\..\..\..\sdk\platform\system_library\include;..\..\..\..\..\..\..\..\..\third_party\rand;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\custom;..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_custs;..\..\..\..\..\..\..\..\..\sdk\platform\core_modules\crypto;..\..\..\..\..\..\..\..\..\sdk\ble_stack\profiles\custom\custs\api;..\src\common;..\..\..\..\..\libs\common;..\..\..\..\..\libs\mible_app_authen;..\..\..\portable;..\src\user</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -397,7 +397,7 @@
             <File>
               <FileName>boot_vectors.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\..\..\..\..\sdk\platform\arch\boot\rvds\boot_vectors.s</FilePath>
+              <FilePath>..\..\..\portable\sdk_overwriter\boot_vectors.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -697,7 +697,7 @@
             <File>
               <FileName>app_entry_point.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_entry\app_entry_point.c</FilePath>
+              <FilePath>..\..\..\portable\sdk_overwriter\app_entry_point.c</FilePath>
             </File>
             <File>
               <FileName>app_default_handlers.c</FileName>
@@ -882,12 +882,13 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>mible_authen_app</GroupName>
+          <GroupName>
+mible_authen_app</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_DA14585.lib</FileName>
+              <FileName>mijia_std_authen_keil_DA14585_1_1_2.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_DA14585.lib</FilePath>
+              <FilePath>..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_DA14585_1_1_2.lib</FilePath>
             </File>
           </Files>
         </Group>
@@ -923,6 +924,31 @@
               <FileName>user_mijia_ble.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\user\user_mijia_ble.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>user_sps</GroupName>
+          <Files>
+            <File>
+              <FileName>app_sps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\app_sps.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_sps_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\app_sps_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>sps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\sps.c</FilePath>
+            </File>
+            <File>
+              <FileName>sps_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\sps_task.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -970,7 +996,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out_585\</OutputDirectory>
-          <OutputName>mijia_std_authen_keil_DA14585</OutputName>
+          <OutputName>mijia_std_authen_keil_DA14585_1_1_2</OutputName>
           <CreateExecutable>0</CreateExecutable>
           <CreateLib>1</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -1387,7 +1413,7 @@
             <File>
               <FileName>boot_vectors.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\..\..\..\..\sdk\platform\arch\boot\rvds\boot_vectors.s</FilePath>
+              <FilePath>..\..\..\portable\sdk_overwriter\boot_vectors.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -2027,7 +2053,7 @@
             <File>
               <FileName>app_entry_point.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\..\..\..\sdk\app_modules\src\app_entry\app_entry_point.c</FilePath>
+              <FilePath>..\..\..\portable\sdk_overwriter\app_entry_point.c</FilePath>
             </File>
             <File>
               <FileName>app_default_handlers.c</FileName>
@@ -2552,12 +2578,13 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>mible_authen_app</GroupName>
+          <GroupName>
+mible_authen_app</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_DA14585.lib</FileName>
+              <FileName>mijia_std_authen_keil_DA14585_1_1_2.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_DA14585.lib</FilePath>
+              <FilePath>..\..\..\..\..\libs\mible_app_authen\mijia_std_authen_keil_DA14585_1_1_2.lib</FilePath>
             </File>
           </Files>
         </Group>
@@ -2729,6 +2756,231 @@
               <FileName>user_mijia_ble.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\user\user_mijia_ble.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>user_sps</GroupName>
+          <Files>
+            <File>
+              <FileName>app_sps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\app_sps.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>app_sps_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\app_sps_task.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>sps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\sps.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>sps_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\portable\sps_task.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>

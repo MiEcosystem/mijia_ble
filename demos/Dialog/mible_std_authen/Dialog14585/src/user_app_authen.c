@@ -40,6 +40,9 @@
 #include "arch_console.h"
 #include "mible_type.h"
 #include "mible_api.h"
+#include "user_callback_config.h"
+#include "mible_log.h"
+
 
 #if (BLE_SUOTA_RECEIVER)
 #include "app_suotar.h"
@@ -98,7 +101,7 @@ void user_app_on_disconnect(struct gapc_disconnect_ind const *param)
 {
     //default_app_on_disconnect(NULL);
 		ke_state_set(TASK_APP, APP_CONNECTED);
-		arch_printf("reason:%x\n",param->reason);
+		MI_LOG_INFO("reason:%x\n",param->reason);
 #if (BLE_MIJIA_SERVER)
 		mible_gap_evt_t evt;
 		evt = MIBLE_GAP_EVT_DISCONNET;
@@ -107,6 +110,8 @@ void user_app_on_disconnect(struct gapc_disconnect_ind const *param)
 		mi_param.conn_handle = param->conhdl;
 		mi_param.disconnect.reason = (mible_gap_disconnect_reason_t)param->reason;
 		mible_gap_event_callback(evt,&mi_param);
+#else
+		CALLBACK_ARGS_0(user_default_app_operations.default_operation_adv)
 #endif
 
 }
