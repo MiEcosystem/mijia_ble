@@ -25,7 +25,7 @@
 ########################################################################
 # Add Application sources here.
 ########################################################################
-$(NAME)_COMPONENTS := mijia_std_authen_wiced_207xx.a
+$(NAME)_COMPONENTS := mijia_std_authen_wiced6x_20706_1_1_2.a
 
 APP_SRC = ../portable/aes.c
 APP_SRC += ../portable/wiced_api.c
@@ -42,7 +42,8 @@ C_FLAGS += -DWICED_BT_TRACE_ENABLE -std=c99
 
 INCS += ../../apps/demo/mijia_ble/libs/common
 INCS += ../../apps/demo/mijia_ble/libs/mible_app_authen
-INCS += ../../apps/demo/mijia_ble/Demo/Cypress/portable
+INCS += ../../apps/demo/mijia_ble/demos/cypress/portable
+
 
 ########################################################################
 ################ DO NOT MODIFY FILE BELOW THIS LINE ####################

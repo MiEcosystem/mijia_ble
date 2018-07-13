@@ -75,8 +75,10 @@
 #include "wiced_bt_trace.h"
 #endif
 
-#include <mible_api.h>
-#include "..\portable\mible_wiced.h"
+#include "mible_api.h"
+#include "mible_wiced.h"
+
+
 /******************************************************************************
  *                                Constants
  ******************************************************************************/
@@ -878,8 +880,8 @@ wiced_bt_gatt_status_t hello_sensor_gatts_req_write_handler( uint16_t conn_id, w
 	gatts_params.write.data = p_data->p_val;
 	gatts_params.write.len = p_data->val_len;
 	gatts_params.write.offset = p_data->offset;
-	//mible_gatts_event_callback(MIBLE_GATTS_EVT_WRITE_PERMIT_REQ,&gatts_params);
-	mible_std_gatts_event_handler(MIBLE_GATTS_EVT_WRITE_PERMIT_REQ,&gatts_params);
+	mible_gatts_event_callback(MIBLE_GATTS_EVT_WRITE_PERMIT_REQ,&gatts_params);
+	//mible_std_gatts_event_handler(MIBLE_GATTS_EVT_WRITE_PERMIT_REQ,&gatts_params);
 
     if ( nv_update )
     {

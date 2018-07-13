@@ -1,6 +1,6 @@
 [submodule "libs/common"]
 	path = libs/common
 	url = https://github.com/MiEcosystem/mijia_ble_common.git
-[submodule "Demo/Cypress/portable"]
-	path = Demo/Cypress/portable
+[submodule "demos/cypress/portable"]
+	path = demos/cypress/portable
 	url = https://github.com/MiEcosystem/mijia_ble_api.git
