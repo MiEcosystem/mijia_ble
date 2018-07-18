@@ -1,6 +1,3 @@
 [submodule "libs/common"]
 	path = libs/common
 	url = https://github.com/MiEcosystem/mijia_ble_common.git
-[submodule "demos/BlueNRG-1/portable"]
-	path = demos/BlueNRG-1/portable
-	url = https://github.com/MiEcosystem/mijia_ble_api.git
