@@ -1,5 +1,8 @@
 libs/mible_app_authen/m*.c
 libs/mible_app_authen/*.a
-demos/BlueNRG-1/mible_std_authen/EWARM/BlueNRG-1/Server/*
-demos/BlueNRG-1/mible_std_authen/EWARM/BlueNRG-1/*.dep
-demos/BlueNRG-1/mible_std_authen/EWARM/BlueNRG-1/settings/*.wsdt
+demos/BlueNRG-X/mible_std_authen/EWARM/BlueNRG-1/Server/*
+demos/BlueNRG-X/mible_std_authen/EWARM/BlueNRG-1/*.dep
+demos/BlueNRG-X/mible_std_authen/EWARM/BlueNRG-1/settings/*.wsdt
+demos/BlueNRG-X/mible_std_authen/EWARM/BlueNRG-2/Server/*
+demos/BlueNRG-X/mible_std_authen/EWARM/BlueNRG-2/*.dep
+demos/BlueNRG-X/mible_std_authen/EWARM/BlueNRG-2/settings/*.wsdt
