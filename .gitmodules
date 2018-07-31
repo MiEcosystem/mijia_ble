@@ -4,3 +4,6 @@
 [submodule "demos/NXP_QN908X/portable"]
 	path = demos/NXP_QN908X/portable
 	url = https://github.com/MiEcosystem/mijia_ble_api.git
+[submodule "demos/NXP_QN902X/portable"]
+	path = demos/NXP_QN902X/portable
+	url = https://github.com/MiEcosystem/mijia_ble_api.git
