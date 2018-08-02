@@ -1,0 +1,12 @@
+// Copyright 2018 Silicon Laboratories, Inc.
+//
+//
+
+Executing: bgbuild (/home/zyx/Downloads/SimplicityStudio_v4/developer/sdks/gecko_sdk_suite/v2.3/protocol/bluetooth/bin/bgbuild)
+Standard output
+ALL OK
+
+Error/Warning output
+WARNING: 2a00 max length attribute is 20 but actual value length is 15. 20 will be used.
+
+

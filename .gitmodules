@@ -1,3 +1,6 @@
 [submodule "libs/common"]
 	path = libs/common
 	url = https://github.com/MiEcosystem/mijia_ble_common.git
+[submodule "demos/Silabs/portable"]
+	path = demos/Silabs/portable
+	url = https://github.com/MiEcosystem/mijia_ble_api.git

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904" moduleId="org.eclipse.cdt.core.settings" name="GNU ARM v7.2.1 - Default">
+				<macros>
+					<stringMacro name="StudioSdkPath" type="VALUE_PATH_DIR" value="${StudioSdkPathFromID:com.silabs.sdk.stack.btmesh:1.3.0.0_-1918636827}"/>
+					<stringMacro name="StudioToolchainPath" type="VALUE_PATH_DIR" value="${StudioToolchainPathFromID:com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904}"/>
+				</macros>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/mijia_ble"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/mijia_ble/GNU ARM v7.2.1 - Default"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="$" srcPrefixMapping="" srcRootPath=""/>
+					</externalSetting>
+				</externalSettings>
+				<extensions>
+					<extension id="com.silabs.ss.framework.debugger.core.HEX" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.silabs.ss.framework.debugger.core.EBL" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.silabs.ss.framework.debugger.core.GBL" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.silabs.ss.framework.debugger.core.BIN" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.silabs.ss.framework.debugger.core.S37" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule buildConfig.needsApplyStock="true" buildConfig.stockConfigId="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904" cppBuildConfig.builtinIncludes="" cppBuildConfig.builtinLibraryFiles="" cppBuildConfig.builtinLibraryNames="m" cppBuildConfig.builtinLibraryObjects="" cppBuildConfig.builtinLibraryPaths="" cppBuildConfig.builtinMacros="EFR32BG13P632F512GM48 EFR32BG13P632F512GM48" moduleId="com.silabs.ss.framework.ide.project.core.cpp" projectCommon.boardIds="brd4104a:0.0.0.A00 brd4001a:0.0.0.A01" projectCommon.partId="mcu.arm.efr32.bg13.efr32bg13p632f512gm48" projectCommon.referencedModules="[{&quot;builtinExcludes&quot;:[],&quot;builtinSources&quot;:[],&quot;module&quot;:&quot;&lt;project:MModule xmlns:project=\&quot;http://www.silabs.com/ss/Project.ecore\&quot; builtin=\&quot;true\&quot; id=\&quot;com.silabs.module.template.external.com.silabs.sdk.stack.super.ble.Bluetooth SDK.2.9.2._-1272863310.efr32-base\&quot;&gt;\n  &lt;inclusions pattern=\&quot;.*\&quot;/&gt;\n&lt;/project:MModule&gt;&quot;,&quot;builtin&quot;:true}]" projectCommon.savedStockVariables="{&quot;pathVar_RUNTEST&quot;:&quot;$(sdkInstallationPath)/tool/runtest&quot;,&quot;pathVar_BEANSHELL&quot;:&quot;$(sdkInstallationPath)/tool/beanshell&quot;,&quot;pathVar_APP_INTERNAL&quot;:&quot;$(sdkInstallationPath)/app/internal&quot;,&quot;pathVar_CMSIS&quot;:&quot;$(sdkInstallationPath)/platform/CMSIS&quot;,&quot;pathVar_SEGGER&quot;:&quot;$(sdkInstallationPath)/util/third_party/segger&quot;,&quot;pathVar_RAIL_LIB&quot;:&quot;$(sdkInstallationPath)/platform/radio/rail_lib&quot;,&quot;pathVar_CSLIB_SRC&quot;:&quot;$(sdkInstallationPath)/platform/middleware/cslib_src&quot;,&quot;pathVar_DEVICE&quot;:&quot;$(sdkInstallationPath)/platform/Device&quot;,&quot;pathVar_TIMAC&quot;:&quot;$(sdkInstallationPath)/util/third_party/timac&quot;,&quot;pathVar_BLUETOOTH_PROTOCOL&quot;:&quot;$(sdkInstallationPath)/protocol/bluetooth&quot;,&quot;pathVar_ESF_COMMON&quot;:&quot;$(sdkInstallationPath)/app/esf_common&quot;,&quot;pathVar_MICRIUM_OS&quot;:&quot;$(sdkInstallationPath)/platform/micrium_os&quot;,&quot;pathVar_BASE&quot;:&quot;$(sdkInstallationPath)/platform/base&quot;,&quot;pathVar_KIT&quot;:&quot;$(sdkInstallationPath)/hardware/kit&quot;,&quot;pathVar_HALCONFIG&quot;:&quot;$(sdkInstallationPath)/platform/halconfig&quot;,&quot;pathVar_ZIGBEE&quot;:&quot;$(sdkInstallationPath)/protocol/zigbee&quot;,&quot;pathVar_GLIB&quot;:&quot;$(sdkInstallationPath)/platform/middleware/glib&quot;,&quot;pathVar_MICRIUM_OS_EXAMPLE&quot;:&quot;$(sdkInstallationPath)/app/micrium_os_example&quot;,&quot;pathVar_USBXPRESS&quot;:&quot;$(sdkInstallationPath)/platform/middleware/usbxpress&quot;,&quot;pathVar_PRODUCTION_BOOTLOADER&quot;:&quot;$(sdkInstallationPath)/platform/production_bootloader&quot;,&quot;pathVar_TCMGR&quot;:&quot;$(sdkInstallationPath)/tool/tcmgr&quot;,&quot;pathVar_MICRIUM_COMPONENTS&quot;:&quot;$(sdkInstallationPath)&quot;,&quot;pathVar_EMWIN&quot;:&quot;$(sdkInstallationPath)/util/third_party&quot;,&quot;pathVar_CJSON&quot;:&quot;$(sdkInstallationPath)/util/third_party/cjson&quot;,&quot;pathVar_USB_GECKO&quot;:&quot;$(sdkInstallationPath)/platform/middleware/usb_gecko&quot;,&quot;pathVar_SCRIPT&quot;:&quot;$(sdkInstallationPath)/tool/script&quot;,&quot;pathVar_RADIO_CONFIGURATOR&quot;:&quot;$(sdkInstallationPath)/platform/tool/efr32_radio_configurator&quot;,&quot;pathVar_STUDIO&quot;:&quot;$(sdkInstallationPath)/.studio&quot;,&quot;pathVar_APPLE_HOMEKIT&quot;:&quot;$(sdkInstallationPath)/app/apple_homekit&quot;,&quot;pathVar_MCU_EXAMPLE&quot;:&quot;$(sdkInstallationPath)/app/mcu_example&quot;,&quot;pathVar_CUSTOMER_BOARD&quot;:&quot;$(sdkInstallationPath)/hardware/customer_board&quot;,&quot;pathVar_UNITY&quot;:&quot;$(sdkInstallationPath)/util/third_party/unity&quot;,&quot;pathVar_EXPERIMENTAL&quot;:&quot;$(sdkInstallationPath)/app/experimental&quot;,&quot;pathVar_REFERENCE_DESIGN&quot;:&quot;$(sdkInstallationPath)/hardware/reference_design&quot;,&quot;pathVar_VSRPC-LIB&quot;:&quot;$(sdkInstallationPath)/tool/vsrpc-lib&quot;,&quot;pathVar_FATFS&quot;:&quot;$(sdkInstallationPath)/util/third_party/fatfs&quot;,&quot;pathVar_SENSOR_SI114XHRM&quot;:&quot;$(sdkInstallationPath)/util/silicon_labs/sensor_si114xhrm&quot;,&quot;pathVar_IEC60335_CLASSB&quot;:&quot;$(sdkInstallationPath)/util/third_party/iec60335_classb&quot;,&quot;pathVar_SCRIPTED_TEST_FRAMEWORK&quot;:&quot;$(sdkInstallationPath)/tool/scripted_test_framework&quot;,&quot;pathVar_MICRIUM&quot;:&quot;$(sdkInstallationPath)/util/third_party/micrium&quot;,&quot;pathVar_EMTOOL&quot;:&quot;$(sdkInstallationPath)/tool/emtool&quot;,&quot;pathVar_BLUETOOTH_APP&quot;:&quot;$(sdkInstallationPath)/app/bluetooth&quot;,&quot;pathVar_JAM&quot;:&quot;$(sdkInstallationPath)/tool/jam&quot;,&quot;pathVar_EMDRV&quot;:&quot;$(sdkInstallationPath)/platform/emdrv&quot;,&quot;pathVar_SILABS_CORE&quot;:&quot;$(sdkInstallationPath)/util/silicon_labs/silabs_core&quot;,&quot;pathVar_CSLIB&quot;:&quot;$(sdkInstallationPath)/platform/middleware/cslib&quot;,&quot;pathVar_KEIL_RTX&quot;:&quot;$(sdkInstallationPath)/util/third_party/keil_rtx&quot;,&quot;pathVar_APACHE_COMMONS&quot;:&quot;$(sdkInstallationPath)/tool/apache_commons&quot;,&quot;pathVar_JENKINS&quot;:&quot;$(sdkInstallationPath)/tool/jenkins&quot;,&quot;pathVar_MBEDTLS&quot;:&quot;$(sdkInstallationPath)/util/third_party/mbedtls&quot;,&quot;pathVar_BOOTLOADER&quot;:&quot;$(sdkInstallationPath)/platform/bootloader&quot;,&quot;pathVar_FLEX&quot;:&quot;$(sdkInstallationPath)/protocol/flex&quot;,&quot;pathVar_PLUGIN&quot;:&quot;$(sdkInstallationPath)/util/plugin&quot;,&quot;pathVar_FREERTOS&quot;:&quot;$(sdkInstallationPath)/util/third_party/freertos&quot;,&quot;pathVar_LWIP&quot;:&quot;$(sdkInstallationPath)/util/third_party/lwip&quot;,&quot;pathVar_LIBCOAP&quot;:&quot;$(sdkInstallationPath)/util/third_party/libcoap&quot;,&quot;pathVar_PAHOMQTT&quot;:&quot;$(sdkInstallationPath)/util/third_party/paho.mqtt.c&quot;,&quot;pathVar_IDE_SUPPORT&quot;:&quot;$(sdkInstallationPath)/tool/ide_support&quot;,&quot;pathVar_CODE_GENERATOR&quot;:&quot;$(sdkInstallationPath)/tool/code_generator&quot;,&quot;pathVar_EMLIB&quot;:&quot;$(sdkInstallationPath)/platform/emlib&quot;,&quot;pathVar_THREAD&quot;:&quot;$(sdkInstallationPath)/protocol/thread&quot;,&quot;pathVar_HWCONFDATA&quot;:&quot;$(sdkInstallationPath)/platform/hwconf_data&quot;}" projectCommon.sdkId="com.silabs.sdk.stack.btmesh:1.3.0.0_-1918636827" projectCommon.toolchainId="com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904" projectCommon.userSettings="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project name=&quot;com.silabs.ember.stack.ble.addition&quot; propertyScope=&quot;project&quot; contentRoot=&quot;.&quot;&gt;&#10;  &lt;folder name=&quot;demos&quot;&gt;&#10;    &lt;folder name=&quot;Silabs&quot;&gt;&#10;      &lt;folder name=&quot;mible_std_authen&quot;&gt;&#10;        &lt;file name=&quot;gatt.xml&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/gatt.xml&quot;/&gt;&#10;        &lt;file name=&quot;gatt_db.c&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/gatt_db.c&quot;/&gt;&#10;        &lt;file name=&quot;gatt_db.h&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/gatt_db.h&quot;/&gt;&#10;        &lt;file name=&quot;BgBuild_Log.txt&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/BgBuild_Log.txt&quot;/&gt;&#10;        &lt;file name=&quot;rail_config.h&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/rail_config.h&quot;/&gt;&#10;        &lt;file name=&quot;rail_config.c&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/rail_config.c&quot;/&gt;&#10;        &lt;file name=&quot;efr32_radio_configurator_log.txt&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/efr32_radio_configurator_log.txt&quot;/&gt;&#10;        &lt;file name=&quot;ble-configuration.h&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/ble-configuration.h&quot;/&gt;&#10;        &lt;file name=&quot;create_bl_files.sh&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/create_bl_files.sh&quot;/&gt;&#10;        &lt;file name=&quot;hal-config-app-common.h&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/hal-config-app-common.h&quot;/&gt;&#10;        &lt;file name=&quot;init_app.c&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/init_app.c&quot;/&gt;&#10;        &lt;file name=&quot;init_mcu.c&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/init_mcu.c&quot;/&gt;&#10;        &lt;file name=&quot;init_board.c&quot; uri=&quot;studio:/project/demos/Silabs/mible_std_authen/init_board.c&quot;/&gt;&#10;      &lt;/folder&gt;&#10;    &lt;/folder&gt;&#10;  &lt;/folder&gt;&#10;  &lt;includePath uri=&quot;studio:/project/demos/Silabs/mible_std_authen&quot;/&gt;&#10;  &lt;toolOption partCompatibility=&quot;.*&quot; toolId=&quot;iar.arm.toolchain.linker.v5.4.0&quot; optionId=&quot;iar.arm.toolchain.linker.option.icfFile.v5.4.0&quot; value=&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/efr32bg13p632f512gm48.icf}&quot;/&gt;&#10;  &lt;toolOption toolchainCompatibility=&quot;gcc&quot; toolId=&quot;com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe&quot; optionId=&quot;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script&quot; value=&quot;${workspace_loc:/${ProjName}/efr32bg13p632f512gm48.ld}&quot;/&gt;&#10;&lt;/project&gt;&#10;"/>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" description="" id="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904" name="GNU ARM v7.2.1 - Default" parent="com.silabs.ide.si32.gcc.cdt.managedbuild.config.gnu.exe">
+					<folderInfo id="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904." name="/" resourcePath="">
+						<toolChain id="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe.915969026" name="Si32 GNU ARM" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe">
+							<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script.107332587" name="Linker Script:" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/efr32bg13p632f512gm48.ld}" valueType="string"/>
+							<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.debug.level.741275487" name="Debug Level" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.debug.level" value="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.debug.level.default" valueType="enumerated"/>
+							<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.usescript.904933084" name="Use custom linker script" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.usescript" value="true" valueType="boolean"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.GNU_ELF;com.silabs.ss.framework.debugger.core.BIN;com.silabs.ss.framework.debugger.core.HEX;com.silabs.ss.framework.debugger.core.S37;com.silabs.ss.framework.debugger.core.EBL;com.silabs.ss.framework.debugger.core.GBL" id="com.silabs.ide.si32.gcc.cdt.managedbuild.target.gnu.platform.base.1616882479" isAbstract="false" name="Debug Platform" osList="win32,linux,macosx" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.target.gnu.platform.base"/>
+							<builder buildPath="${workspace_loc:/soc-empty}/GNU ARM v7.2.1 - Default" id="com.silabs.ide.si32.gcc.cdt.managedbuild.target.gnu.builder.base.1831791593" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Si32 GNU ARM Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.target.gnu.builder.base"/>
+							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base.2002813972" name="GNU ARM C Compiler" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base">
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.misc.dialect.1991573552" name="C Language Dialect" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.misc.dialect" value="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.misc.dialect.c99" valueType="enumerated"/>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.floatingpoint.type.1409340217" name="Floating-Point ABI" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.floatingpoint.type" value="floatingpoint.type.softfp" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.2112188182" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/common/halconfig}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/util}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/util/third_party/mbedtls/sl_crypto/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/util/third_party/mbedtls/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/ble_stack/inc/soc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/sleep/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/bootloader/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/CMSIS/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/radio/rail_lib/chip/efr32}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/Device/SiliconLabs/EFR32BG13P/Source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/libs/mible_app_authen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/EFR32BG13_BRD4104A/config}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/Device/SiliconLabs/EFR32BG13P/Source/GCC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/sleep/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/gpiointerrupt/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/app/bluetooth/common/stack_bridge}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/common/drivers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/common/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/Device/SiliconLabs/EFR32BG13P/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/ble_stack/inc/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/libs/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emlib/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/halconfig/inc/hal-config}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/portable}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/radio/rail_lib/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/bootloader}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emlib/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/uartdrv/inc}&quot;"/>
+								</option>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.def.symbols.903210582" name="Defined symbols (-D)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.def.symbols" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="HAL_CONFIG=1"/>
+									<listOptionValue builtIn="false" value="MI_LOG_ENABLED=1"/>
+									<listOptionValue builtIn="false" value="DEBUG=1"/>
+									<listOptionValue builtIn="false" value="MI_ASSERT=1"/>
+									<listOptionValue builtIn="false" value="__StackLimit=0x20000000"/>
+									<listOptionValue builtIn="false" value="__HEAP_SIZE=0xD00"/>
+									<listOptionValue builtIn="false" value="__STACK_SIZE=0x800"/>
+									<listOptionValue builtIn="false" value="EFR32BG13P632F512GM48=1"/>
+								</option>
+								<option id="gnu.c.compiler.option.optimization.level.1909835834" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" value="gnu.c.optimization.level.size" valueType="enumerated"/>
+								<inputType id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.input.2129946062" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.base.527398131" name="GNU ARM C++ Compiler" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.base"/>
+							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base.994152664" name="GNU ARM Assembler" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.base">
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.flags.1573894115" name="Assembler flags" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.flags" value="-c -x assembler-with-cpp -mfpu=fpv4-sp-d16 -mfloat-abi=softfp" valueType="string"/>
+								<option id="gnu.both.asm.option.include.paths.796137950" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/common/halconfig}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/ble_stack/inc/soc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/sleep/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/bootloader/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/CMSIS/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/radio/rail_lib/chip/efr32}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/Device/SiliconLabs/EFR32BG13P/Source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/EFR32BG13_BRD4104A/config}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/Device/SiliconLabs/EFR32BG13P/Source/GCC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/sleep/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/gpiointerrupt/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/app/bluetooth/common/stack_bridge}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/common/drivers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/hardware/kit/common/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/Device/SiliconLabs/EFR32BG13P/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/ble_stack/inc/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emlib/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/halconfig/inc/hal-config}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/radio/rail_lib/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/bootloader}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emlib/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/emdrv/uartdrv/inc}&quot;"/>
+								</option>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.as.def.symbols.575510674" name="Defined symbols (-D)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.as.def.symbols" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="HAL_CONFIG=1"/>
+									<listOptionValue builtIn="false" value="__StackLimit=0x20000000"/>
+									<listOptionValue builtIn="false" value="__HEAP_SIZE=0xD00"/>
+									<listOptionValue builtIn="false" value="__STACK_SIZE=0x800"/>
+									<listOptionValue builtIn="false" value="EFR32BG13P632F512GM48=1"/>
+								</option>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.floatingpoint.enable.1749541783" name="Enable Hardware Floating Point (-mfpu=)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.floatingpoint.enable" value="true" valueType="boolean"/>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.floatingpoint.type.1516388128" name="Floating-Point ABI" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.assembler.floatingpoint.type" value="floatingpoint.type.softfp" valueType="enumerated"/>
+								<inputType id="org.eclipse.cdt.core.asmSource.872126798" superClass="org.eclipse.cdt.core.asmSource"/>
+							</tool>
+							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.base.832910119" name="GNU ARM C Linker" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.base">
+								<option id="gnu.c.link.option.userobjs.312946546" name="Other objects" superClass="gnu.c.link.option.userobjs" valueType="userObjs">
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/libmbedtls.a}"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/libs/mible_app_authen/mijia_std_authen_Simplicity_BG13_1_1_2.a}&quot;"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/libpsstore.a}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/radio/rail_lib/autogen/librail_release/librail_efr32xg13_gcc_release.a}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/libbluetooth.a}"/>
+								</option>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.floatingpoint.type.1462467515" name="Floating-Point ABI" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.floatingpoint.type" value="floatingpoint.type.softfp" valueType="enumerated"/>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.circulardependency.231771291" name="Use library file circular dependency" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.circulardependency" value="true" valueType="boolean"/>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.nostdlibs.12197709" name="No startup or default libs (-nostdlib)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.nostdlibs" value="false" valueType="boolean"/>
+								<option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.clibs.1322567462" name="C Library" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.clibs" value="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.nanospec" valueType="enumerated"/>
+								<option id="gnu.c.link.option.libs.1054101746" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="m"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1766402525" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base.900404223" name="GNU ARM C++ Linker" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.base">
+								<option id="gnu.cpp.link.option.userobjs.339932499" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/libmbedtls.a}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/libpsstore.a}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/binapploader.o}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/platform/radio/rail_lib/autogen/librail_release/librail_efr32xg13_gcc_release.a}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/demos/Silabs/mible_std_authen/protocol/bluetooth/lib/EFR32BG13P/GCC/libbluetooth.a}"/>
+								</option>
+							</tool>
+							<tool id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.archiver.base.1286926906" name="GNU ARM Archiver" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.archiver.base">
+								<outputType id="cdt.managedbuild.tool.gnu.archiver.output.1315179324" outputPrefix="mijia_std_authen_Simplicity_BG13_1_1_2" superClass="cdt.managedbuild.tool.gnu.archiver.output"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904.856927600" name="mijia_std_authen_Simplicity_BG13_1_1_2.a" rcbsApplicability="disable" resourcePath="libs/mible_app_authen/mijia_std_authen_Simplicity_BG13_1_1_2.a" toolsToInvoke="">
+						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1650125211" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1669860584" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.212795069" name="Resource Custom Build Step Output Type"/>
+						</tool>
+					</fileInfo>
+					<sourceEntries>
+						<entry excluding="libs/mible_app_authen/mible_server.c|libs/mible_app_authen/mible_ll_callback.c|libs/mible_app_authen/mible_FSM.c|libs/mible_app_authen/mible_crypto.c|.git/modules/demos/Silabs/mible_std_authen/portable/objects/info|.git/modules/demos/Silabs/portable/objects/info|.git/modules/libs/common/refs/tags|.git/modules/libs/common/objects/info|.git/refs/tags|.git/objects/info|.git/objects/pack|.git/branches" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule generalProj.esf.protocolIds="com.silabs.sdk.stack.super:2.3.1._360095825.com.silabs.stack.ble:2.9.2.0_1258384625" generalProj.esf.protocolNames="ble" moduleId="com.silabs.ss.framework.ide.project.core.cpp" project.generation="7" projectCommon.boardIds="brd4104a:0.0.0.A00 brd4001a:0.0.0.A01" projectCommon.buildArtifactType="EXE" projectCommon.partId="mcu.arm.efr32.bg13.efr32bg13p632f512gm48" projectCommon.sdkId="com.silabs.sdk.stack.super:2.3.1._360095825" projectCommon.toolchainId="com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904"/>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="soc-empty.com.silabs.ss.framework.ide.project.core.cdt.cdtMbsProjectType.45750825" name="SLS CDT Project" projectType="com.silabs.ss.framework.ide.project.core.cdt.cdtMbsProjectType"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="GNU ARM v7.2.1 - Default - EFR32BG13P632F512GM48">
+			<resource resourceType="PROJECT" workspacePath="/mijia_ble"/>
+		</configuration>
+		<configuration configurationName="GNU ARM v7.2.1 - Default">
+			<resource resourceType="PROJECT" workspacePath="/mijia_ble"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904;com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904.;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base.2002813972;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.input.2129946062">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904 - EFR32BG13P632F512GM48;com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904 - EFR32BG13P632F512GM48.;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base.1571302299;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.input.372806331">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904 - EFR32BG13P632F512GM48;com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904 - EFR32BG13P632F512GM48.;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base.1417327432;com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.input.75119287">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>

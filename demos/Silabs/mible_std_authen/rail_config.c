@@ -1,0 +1,161 @@
+// Copyright 2018 Silicon Laboratories, Inc.
+//
+//
+
+/***************************************************************************//**
+ * @file rail_config.c
+ * @brief RAIL Configuration
+ * @copyright Copyright 2015 Silicon Laboratories, Inc. http://www.silabs.com
+ ******************************************************************************/
+// =============================================================================
+//
+//  WARNING: Auto-Generated Radio Config  -  DO NOT EDIT
+//  Radio Configurator Version: 3.4.3
+//  RAIL Adapter Version: 2.0.7
+//  RAIL Compatibility: 1.x
+//
+// =============================================================================
+#include "em_common.h"
+#include "rail_config.h"
+
+const uint32_t generated_phyInfo[] = {
+  0UL,
+  0x0004A8A5UL, // 4.65878070974
+};
+
+const uint32_t generated[] = {
+  0x01011FF0UL, 0x003F003FUL,
+  0x01011FF4UL, 0x00000000UL,
+  0x01011FF8UL, (uint32_t) &generated_phyInfo,
+  0x00010004UL, 0x00000000UL,
+  0x00010008UL, 0x00000000UL,
+  0x00010018UL, 0x0000000FUL,
+  0x0001001CUL, 0x00000000UL,
+  0x00010028UL, 0x00000000UL,
+  0x0001002CUL, 0x00000000UL,
+  0x00010030UL, 0x00000000UL,
+  0x00010034UL, 0x00000000UL,
+  0x00010038UL, 0x00000000UL,
+  0x0001003CUL, 0x00000000UL,
+  0x00010040UL, 0x00000700UL,
+  0x00010048UL, 0x00000000UL,
+  0x00010054UL, 0x00000000UL,
+  0x00010058UL, 0x00000000UL,
+  0x000100A0UL, 0x00004CFFUL,
+  0x000100A4UL, 0x00000000UL,
+  0x000100A8UL, 0x00004DFFUL,
+  0x000100ACUL, 0x00000000UL,
+  0x00012000UL, 0x00000744UL,
+  0x00012010UL, 0x00000000UL,
+  0x00012018UL, 0x0000A001UL,
+  0x00013008UL, 0x0100AC13UL,
+  0x00013030UL, 0x0010AF8FUL,
+  0x00013034UL, 0x0000001DUL,
+  0x00013040UL, 0x00000000UL,
+  0x000140A0UL, 0x0F0027AAUL,
+  0x000140B8UL, 0x0023C000UL,
+  0x000140F4UL, 0x00001020UL,
+  0x00014134UL, 0x00000880UL,
+  0x00014138UL, 0x000087F6UL,
+  0x00014140UL, 0x00880020UL,
+  0x00014144UL, 0x4D52E6C1UL,
+  0x00014160UL, 0x00000000UL,
+  0x00014164UL, 0x00000000UL,
+  0x00014168UL, 0x00000006UL,
+  0x0001416CUL, 0x00000006UL,
+  0x00016014UL, 0x00000010UL,
+  0x00016018UL, 0x04000000UL,
+  0x0001601CUL, 0x0002C00FUL,
+  0x00016020UL, 0x000050C8UL,
+  0x00016024UL, 0x000AD000UL,
+  0x00016028UL, 0x03000000UL,
+  0x0001602CUL, 0x00000000UL,
+  0x00016030UL, 0x00000000UL,
+  0x00016050UL, 0x00107D00UL,
+  0x00016054UL, 0x00000C41UL,
+  0x00016058UL, 0x00000EB1UL,
+  0x0001605CUL, 0x00140012UL,
+  0x00016060UL, 0x0000B16FUL,
+  0x00016064UL, 0x00000000UL,
+  0x00016078UL, 0x08E0081FUL,
+  0x0001607CUL, 0x00000000UL,
+  0x00016080UL, 0x003B0338UL,
+  0x00016084UL, 0x00000000UL,
+  0x00016088UL, 0x00000000UL,
+  0x0001608CUL, 0x22140A04UL,
+  0x00016090UL, 0x4F4A4132UL,
+  0x00016094UL, 0x00000000UL,
+  0x00016098UL, 0x00000000UL,
+  0x0001609CUL, 0x00000000UL,
+  0x000160A0UL, 0x00000000UL,
+  0x000160A4UL, 0x00000000UL,
+  0x000160E4UL, 0x8C58088FUL,
+  0x000160E8UL, 0x00000000UL,
+  0x000160ECUL, 0x07830464UL,
+  0x000160F0UL, 0x3AC81388UL,
+  0x000160F4UL, 0x0006209CUL,
+  0x000160F8UL, 0x00206100UL,
+  0x000160FCUL, 0x208556B7UL,
+  0x00016104UL, 0x00105DA1UL,
+  0x00016108UL, 0x00003020UL,
+  0x0001610CUL, 0x0000BB88UL,
+  0x00016120UL, 0x00000000UL,
+  0x00016130UL, 0x00FA53E8UL,
+  0x00016134UL, 0x00000000UL,
+  0x00016138UL, 0x00000000UL,
+  0x0001613CUL, 0x00000000UL,
+  0x00016140UL, 0x00000000UL,
+  0x00016144UL, 0x00000000UL,
+  0x00016148UL, 0x00000000UL,
+  0x0001614CUL, 0x00000001UL,
+  0x00017014UL, 0x000270FEUL,
+  0x00017018UL, 0x00001300UL,
+  0x0001701CUL, 0x844A0060UL,
+  0x00017020UL, 0x00000000UL,
+  0x00017024UL, 0x00000082UL,
+  0x00017028UL, 0x00000000UL,
+  0x0001702CUL, 0x000000D5UL,
+  0x00017048UL, 0x0000383EUL,
+  0x0001704CUL, 0x000025BCUL,
+  0x00017070UL, 0x00120103UL,
+  0x00017074UL, 0x0008302BUL,
+  0x00017078UL, 0x006D8480UL,
+
+  0xFFFFFFFFUL,
+};
+
+const uint32_t *configList[] = {
+  generated,
+};
+
+const char *configNames[] = {
+  "generated",
+};
+
+RAIL_ChannelConfigEntry_t generated_channels[] = {
+  { 0, 20, 1000000, 169000000 },
+};
+
+const RAIL_ChannelConfig_t generated_channelConfig = {
+  generated_channels,
+  1,
+};
+
+const RAIL_ChannelConfig_t *channelConfigs[] = {
+  &generated_channelConfig,
+};
+
+RAIL_FrameType_t *frameTypeConfigList[] = {
+  NULL
+};
+
+const uint8_t irCalConfig[] = {
+  24, 53, 12, 6, 4, 16, 0, 1, 1, 2, 0, 2, 2, 0, 0, 0, 0, 5, 0, 1, 1, 0, 0, 0, 0
+};
+
+
+//        _  _                          
+//       | )/ )         Wireless        
+//    \\ |//,' __       Application     
+//    (")(_)-"()))=-    Software        
+//       (\\            Platform        
