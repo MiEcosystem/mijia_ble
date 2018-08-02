@@ -375,7 +375,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>MI_LOG_ENABLED</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\src\fw;..\..\..\..\..\src\profiles;..\..\..\..\..\src\profiles\dis\diss;..\..\..\..\..\src\app;..\..\..\..\..\src\app\gap;..\..\..\..\..\src\app\gatt;..\..\..\..\..\src\app\smp;..\..\..\..\..\src\app\diss;..\..\..\..\..\src\cmsis;..\..\..\..\..\src\driver;..\..\..\..\..\src\lib;..\..\..\..\..\src\qnevb;..\..\..\..\src;..\..\..\..\..\src\app\mis;..\..\..\..\..\src\profiles\mis;..\..\..\..\..\src\profiles\mis\mis;..\..\portable;..\..\..\..\libs\mible_app_authen;..\..\..\..\libs\common</IncludePath>
+              <IncludePath>..\..\..\..\..\src\fw;..\..\..\..\..\src\profiles;..\..\..\..\..\src\profiles\dis\diss;..\..\..\..\..\src\app;..\..\..\..\..\src\app\gap;..\..\..\..\..\src\app\gatt;..\..\..\..\..\src\app\smp;..\..\..\..\..\src\app\diss;..\..\..\..\..\src\cmsis;..\..\..\..\..\src\driver;..\..\..\..\..\src\lib;..\..\..\..\..\src\qnevb;..\src;..\..\..\..\..\src\app\mis;..\..\..\..\..\src\profiles\mis;..\..\..\..\..\src\profiles\mis\mis;..\..\portable;..\..\..\..\libs\mible_app_authen;..\..\..\..\libs\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -445,12 +445,12 @@
             <File>
               <FileName>system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\src\system.c</FilePath>
+              <FilePath>..\src\system.c</FilePath>
             </File>
             <File>
               <FileName>usr_design.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\src\usr_design.c</FilePath>
+              <FilePath>..\src\usr_design.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1436,12 +1436,12 @@
             <File>
               <FileName>system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\src\system.c</FilePath>
+              <FilePath>..\src\system.c</FilePath>
             </File>
             <File>
               <FileName>usr_design.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\src\usr_design.c</FilePath>
+              <FilePath>..\src\usr_design.c</FilePath>
             </File>
           </Files>
         </Group>
