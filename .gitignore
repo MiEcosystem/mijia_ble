@@ -1,0 +1,10 @@
+**/_build
+
+*.TMP
+*.scvd
+*.html
+*.uvguix.*
+*JLinklog*
+
+*JLinkLog\.txt
+
