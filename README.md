@@ -1,7 +1,7 @@
-此分支为Nordic52平台的米家蓝牙标准接入SDK，在原厂SDK 15.2基础上提供库以及示例demo。
+﻿此分支为Nordic52平台的米家蓝牙标准接入SDK，在原厂SDK 15.2基础上提供库以及示例demo。
 
 ### 使用
-1、下载nRF5 SDK 15.2.0 [here](https://www.nordicsemi.com/eng/nordic/Products/nRF52-DK/nRF5-SDK-zip/59014)
+1、下载nRF5 SDK 15.2.0 [here](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK)
 
 建议将SDK下载到硬盘根目录下，过长的目录会导致keil编译失败
 
