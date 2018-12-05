@@ -1,6 +1,0 @@
-[submodule "mijia_ble_api"]
-	path = mijia_ble_api
-	url = https://github.com/MiEcosystem/mijia_ble_api.git
-[submodule "mijia_ble_libs"]
-	path = mijia_ble_libs
-	url = https://github.com/MiEcosystem/mijia_ble_libs.git
