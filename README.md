@@ -1,30 +1,22 @@
-# Hardware Platform
-- nRF52832-DK PCA10040
-- nRF52840-DK PCA10056
+此分支为Nordic52平台的米家蓝牙标准接入SDK，在原厂SDK 15.2基础上提供库以及示例demo。
 
-*<!> nRF51 demo project is in the branch [**nordic_legacy**](https://github.com/MiEcosystem/mijia_ble_secure/tree/nordic_legacy)*
+### 使用
+1、下载nRF5 SDK 15.2.0 [here](https://www.nordicsemi.com/eng/nordic/Products/nRF52-DK/nRF5-SDK-zip/59014)
 
-# Requirement
-- arm MDK 5.25
-- SEGGER Jlink
-- Git
+建议将SDK下载到硬盘根目录下，过长的目录会导致keil编译失败
 
-# How to use
+2、下载米家标准认证示例demo
 
-1. You need to download nRF5 SDK 15.2.0 from [here](https://www.nordicsemi.com/eng/nordic/Products/nRF52-DK/nRF5-SDK-zip/59014)
-2. $ cd SDK_15.2.0\examples\ble_peripheral\ directory.
-3. $ git clone --recursive https://github.com/MiEcosystem/mijia_ble_secure.git -b nordic
-3. change PRODUCT_ID to your product ID (i.e. pid), that you got when registered in [Mi IoT](https://iot.mi.com/index.html). The default PID is stand for Xiaomi BLE secure devboard.
+cd in SDK 15.2.0\examples\ble_peripheral\ directory.
 
-# Diagnose
-### Unix-like system
-Make sure you have installed JLink and add it to your path. <br>
-$ JLinkExe -device NRF52832_XXAA -if swd -speed 1000 -RTTTelnetPort 2000 <br>
-or<br>
-$ JLinkExe -device NRF52840_XXAA -if swd -speed 1000 -RTTTelnetPort 2000 <br>
-Then open a new terminal tab and execute:<br>
-$ telnet 127.0.0.1 2000<br>
-You will find the log information in this telnet session.
+ $ git clone -b Nordic15.2 --recursive https://github.com/MiEcosystem/mijia_ble.git
 
-### windows 
-Use the J-Link RTT Viewer to get those log information.
+3、将从米家开放平台上申请得到的mijia_std_authen_keil.lib拷贝到mijia_ble\mijia_ble_libs\mible_app_authen文件夹下
+
+米家蓝牙标准认证库闭源，请联系 https://iot.mi.com/ 平台申请，详见https://iot.mi.com/guide.html#id=57
+
+4、Nordic52工程路径：mijia_ble\pca10040\s132\arm5_no_packs
+
+可以在KEIL5中运行
+
+5、关于米家蓝牙标准认证库的使用说明如下链接：https://miecosystem.github.io/mijia_ble/ 
