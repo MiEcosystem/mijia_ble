@@ -8,7 +8,7 @@
   <Extensions>
     <cExt>*.c</cExt>
     <aExt>*.s*; *.src; *.a*</aExt>
-    <oExt>*.obj</oExt>
+    <oExt>*.obj; *.o</oExt>
     <lExt>*.lib</lExt>
     <tExt>*.txt; *.h; *.inc</tExt>
     <pExt>*.plm</pExt>
@@ -100,6 +100,9 @@
         <tRSysVw>1</tRSysVw>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
+        <bEvRecOn>1</bEvRecOn>
+        <bSchkAxf>0</bSchkAxf>
+        <bTchkAxf>0</bTchkAxf>
         <nTsel>6</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
@@ -186,9 +189,16 @@
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
       <bLintAuto>0</bLintAuto>
-      <Lin2Executable></Lin2Executable>
-      <Lin2ConfigFile></Lin2ConfigFile>
-      <bLin2Auto>0</bLin2Auto>
+      <bAutoGenD>0</bAutoGenD>
+      <LntExFlags>0</LntExFlags>
+      <pMisraName></pMisraName>
+      <pszMrule></pszMrule>
+      <pSingCmds></pSingCmds>
+      <pMultCmds></pMultCmds>
+      <pMisraNamep></pMisraNamep>
+      <pszMrulep></pszMrulep>
+      <pSingCmdsp></pSingCmdsp>
+      <pMultCmdsp></pMultCmdsp>
     </TargetOption>
   </Target>
 
@@ -537,7 +547,7 @@
   </Group>
 
   <Group>
-    <GroupName>mijia_libs</GroupName>
+    <GroupName>mijia_ble_api</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -549,8 +559,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_libs\common\ccm.c</PathWithFileName>
-      <FilenameWithoutPath>ccm.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_ble_api\aes.c</PathWithFileName>
+      <FilenameWithoutPath>aes.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -561,8 +571,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_libs\common\mible_beacon.c</PathWithFileName>
-      <FilenameWithoutPath>mible_beacon.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_ble_api\chipsea_api.c</PathWithFileName>
+      <FilenameWithoutPath>chipsea_api.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -573,8 +583,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_libs\common\queue.c</PathWithFileName>
-      <FilenameWithoutPath>queue.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_ble_api\chipsea_fifo.c</PathWithFileName>
+      <FilenameWithoutPath>chipsea_fifo.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -585,27 +595,27 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_libs\common\sha256_hkdf.c</PathWithFileName>
-      <FilenameWithoutPath>sha256_hkdf.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_ble_api\chipsea_func.c</PathWithFileName>
+      <FilenameWithoutPath>chipsea_func.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
       <FileNumber>29</FileNumber>
-      <FileType>4</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_libs\mible_app_authen\mible_app_authen.lib</PathWithFileName>
-      <FilenameWithoutPath>mible_app_authen.lib</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_ble_api\mible_api.c</PathWithFileName>
+      <FilenameWithoutPath>mible_api.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
   </Group>
 
   <Group>
-    <GroupName>mijia_portable</GroupName>
+    <GroupName>mijia_libs</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -617,8 +627,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_portable\mible_api.c</PathWithFileName>
-      <FilenameWithoutPath>mible_api.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_libs\mijia_ble_common\ccm.c</PathWithFileName>
+      <FilenameWithoutPath>ccm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -629,8 +639,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_portable\aes.c</PathWithFileName>
-      <FilenameWithoutPath>aes.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_libs\mijia_ble_common\mible_beacon.c</PathWithFileName>
+      <FilenameWithoutPath>mible_beacon.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -641,8 +651,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_portable\chipsea_api.c</PathWithFileName>
-      <FilenameWithoutPath>chipsea_api.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_libs\mijia_ble_common\queue.c</PathWithFileName>
+      <FilenameWithoutPath>queue.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -653,20 +663,20 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_portable\chipsea_func.c</PathWithFileName>
-      <FilenameWithoutPath>chipsea_func.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_libs\mijia_ble_common\sha256_hkdf.c</PathWithFileName>
+      <FilenameWithoutPath>sha256_hkdf.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>9</GroupNumber>
       <FileNumber>34</FileNumber>
-      <FileType>1</FileType>
+      <FileType>4</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\mijia_portable\chipsea_fifo.c</PathWithFileName>
-      <FilenameWithoutPath>chipsea_fifo.c</FilenameWithoutPath>
+      <PathWithFileName>..\src\mijia_libs\mible_app_authen\mible_app_authen.lib</PathWithFileName>
+      <FilenameWithoutPath>mible_app_authen.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

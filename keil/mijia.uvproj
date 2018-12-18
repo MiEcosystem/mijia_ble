@@ -10,7 +10,8 @@
       <TargetName>cst92f30</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>CST92F30</Device>
@@ -123,6 +124,47 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
+          <Simulator>
+            <UseSimulator>0</UseSimulator>
+            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <RunToMain>1</RunToMain>
+            <RestoreBreakpoints>1</RestoreBreakpoints>
+            <RestoreWatchpoints>1</RestoreWatchpoints>
+            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
+            <RestoreFunctions>1</RestoreFunctions>
+            <RestoreToolbox>1</RestoreToolbox>
+            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
+          </Simulator>
+          <Target>
+            <UseTarget>1</UseTarget>
+            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <RunToMain>1</RunToMain>
+            <RestoreBreakpoints>1</RestoreBreakpoints>
+            <RestoreWatchpoints>1</RestoreWatchpoints>
+            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
+            <RestoreFunctions>0</RestoreFunctions>
+            <RestoreToolbox>1</RestoreToolbox>
+            <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
+          </Target>
+          <RunDebugAfterBuild>0</RunDebugAfterBuild>
+          <TargetSelection>6</TargetSelection>
+          <SimDlls>
+            <CpuDll></CpuDll>
+            <CpuDllArguments></CpuDllArguments>
+            <PeripheralDll></PeripheralDll>
+            <PeripheralDllArguments></PeripheralDllArguments>
+            <InitializationFile></InitializationFile>
+          </SimDlls>
+          <TargetDlls>
+            <CpuDll></CpuDll>
+            <CpuDllArguments></CpuDllArguments>
+            <PeripheralDll></PeripheralDll>
+            <PeripheralDllArguments></PeripheralDllArguments>
+            <InitializationFile>..\..\..\..\link\keil\RAM.ini</InitializationFile>
+            <Driver>Segger\JL2CM3.dll</Driver>
+          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -321,16 +363,20 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
+            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\components\ble\controller;..\..\..\..\components\ble\hci;..\..\..\..\components\ble\host;..\..\..\..\components\ble\include;..\..\..\..\components\cmsis\device;..\..\..\..\components\cmsis\include;..\..\..\..\components\driver;..\..\..\..\components\inc;..\..\..\..\components\osal\include;..\..\..\..\components\profiles\DevInfo;..\..\..\..\components\profiles\GATT;..\..\..\..\components\profiles\Roles;..\..\..\..\components\profiles\MijiaProfile;..\..\..\..\libraries;..\src;..\..\..\..\external\cs_printf;..\src\mijia_libs\common;..\src\mijia_libs\mible_app_authen;..\src\mijia_portable</IncludePath>
+              <IncludePath>..\..\..\..\components\ble\controller;..\..\..\..\components\ble\hci;..\..\..\..\components\ble\host;..\..\..\..\components\ble\include;..\..\..\..\components\cmsis\device;..\..\..\..\components\cmsis\include;..\..\..\..\components\driver;..\..\..\..\components\inc;..\..\..\..\components\osal\include;..\..\..\..\components\profiles\DevInfo;..\..\..\..\components\profiles\GATT;..\..\..\..\components\profiles\Roles;..\..\..\..\components\profiles\MijiaProfile;..\..\..\..\libraries;..\src;..\..\..\..\external\cs_printf;..\src\mijia_libs\mijia_ble_common;..\src\mijia_libs\mible_app_authen;..\src\mijia_ble_api</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -343,6 +389,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -526,62 +573,62 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>mijia_ble_api</GroupName>
+          <Files>
+            <File>
+              <FileName>aes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\mijia_ble_api\aes.c</FilePath>
+            </File>
+            <File>
+              <FileName>chipsea_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\mijia_ble_api\chipsea_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>chipsea_fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\mijia_ble_api\chipsea_fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>chipsea_func.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\mijia_ble_api\chipsea_func.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\mijia_ble_api\mible_api.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>mijia_libs</GroupName>
           <Files>
             <File>
               <FileName>ccm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\src\mijia_libs\common\ccm.c</FilePath>
+              <FilePath>..\src\mijia_libs\mijia_ble_common\ccm.c</FilePath>
             </File>
             <File>
               <FileName>mible_beacon.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\src\mijia_libs\common\mible_beacon.c</FilePath>
+              <FilePath>..\src\mijia_libs\mijia_ble_common\mible_beacon.c</FilePath>
             </File>
             <File>
               <FileName>queue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\src\mijia_libs\common\queue.c</FilePath>
+              <FilePath>..\src\mijia_libs\mijia_ble_common\queue.c</FilePath>
             </File>
             <File>
               <FileName>sha256_hkdf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\src\mijia_libs\common\sha256_hkdf.c</FilePath>
+              <FilePath>..\src\mijia_libs\mijia_ble_common\sha256_hkdf.c</FilePath>
             </File>
             <File>
               <FileName>mible_app_authen.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\src\mijia_libs\mible_app_authen\mible_app_authen.lib</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>mijia_portable</GroupName>
-          <Files>
-            <File>
-              <FileName>mible_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\mijia_portable\mible_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>aes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\mijia_portable\aes.c</FilePath>
-            </File>
-            <File>
-              <FileName>chipsea_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\mijia_portable\chipsea_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>chipsea_func.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\mijia_portable\chipsea_func.c</FilePath>
-            </File>
-            <File>
-              <FileName>chipsea_fifo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\mijia_portable\chipsea_fifo.c</FilePath>
             </File>
           </Files>
         </Group>
