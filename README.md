@@ -9,7 +9,7 @@
 
 cd in CST92F30SDK\projects\ble_peripheral\ directory.
 
- $ git clone -b CST92F30 --recursive https://github.com/MiEcosystem/mijia_ble.git
+ $ git clone -b Chipsea --recursive https://github.com/MiEcosystem/mijia_ble.git
 
 3、将从米家开放平台上申请得到的mijia_std_authen_keil.lib拷贝到mijia_ble\src\mijia_libs\mible_app_authen文件夹下
 
