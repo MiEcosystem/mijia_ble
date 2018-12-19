@@ -22,3 +22,6 @@ Nordic52工程路径：mijia_ble/demos/Nordic/mible_std_authen/pca10040/s132/arm
 可以在KEIL5中运行
 
 5、关于米家蓝牙标准认证库的使用说明如下链接：https://miecosystem.github.io/mijia_ble/ 
+
+### 注意
+nRF5 SDK已升级到15.2，后续Nordic52平台的开发建议在[Nordic_SDK15.2分支](https://github.com/MiEcosystem/mijia_ble/tree/Nordic_SDK15.2)进行
