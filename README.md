@@ -9,7 +9,7 @@
 
 cd in SDK 15.2.0\examples\ble_peripheral\ directory.
 
- $ git clone -b Nordic_nRF52 --recursive https://github.com/MiEcosystem/mijia_ble.git
+ $ git clone -b Nordic_SDK15.2 --recursive https://github.com/MiEcosystem/mijia_ble.git
 
 3、将从米家开放平台上申请得到的mijia_std_authen_keil.lib拷贝到mijia_ble\mijia_ble_libs\mible_app_authen文件夹下
 
