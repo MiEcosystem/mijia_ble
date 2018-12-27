@@ -1,7 +1,7 @@
 ﻿此分支为芯海科技CST92F30平台的米家蓝牙标准接入SDK，在原厂SDK基础上提供库以及示例demo。
 
 ### 使用
-1、请联系芯海科技 support@chipsea.com 获取CST92F30SDK
+1、请联系芯海科技 support@chipsea.com 获取CST92F30SDK，目前适配版本为CST92F30SDK 1.1。
 
 建议将CST92F30SDK下载到硬盘根目录下，过长的目录会导致keil编译失败
 
