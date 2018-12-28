@@ -47,10 +47,11 @@ extern uint16_t mible_server_connection_handle;
 #define WIFI_CONFIG_RESTORE						0x04
 
 /*
- * @TYPE	mible_gatts_bonding_propert
- * @brief	STRONG_BONDING:	The account is strongly related to the device, 
- * 			and the device can be bound by others only when the account deletes this device
- * 			WEAK_BONDIND: 	The device can be bound by anyone else. 		
+ * @TYPE	mible_function_t
+ * @brief	use for mible_server_info_init func,
+ *              WIFI_CONFIG: for wifi config, 
+ * 	        STD_AUTHEN: for std BLE authen,
+ * 	        REMOTE_CONTROL: for BLE remote control. 		
  * 			
  * */
 typedef enum{
