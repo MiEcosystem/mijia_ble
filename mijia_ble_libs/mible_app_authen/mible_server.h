@@ -20,7 +20,7 @@
 #define MIBLE_STD_SERVER_CONN_SUP_TIMEOUT 		0X012c
 
 
-#define MIBLE_STD_SERVER_TIMEOUT 				100000	//15
+#define MIBLE_STD_SERVER_TIMEOUT 				15000	//15
 
 extern uint16_t mible_server_connection_handle;
 
@@ -48,14 +48,12 @@ extern uint16_t mible_server_connection_handle;
 
 /*
  * @TYPE	mible_function_t
- * @brief	use for mible_server_info_init func,
- *              WIFI_CONFIG: for wifi config, 
- * 	        STD_AUTHEN: for std BLE authen,
- * 	        REMOTE_CONTROL: for BLE remote control. 		
+ * @brief	use for mible_server_info_init function, 
+ * 1. Standard ble device (MI_BLE_AUTHEN);
+ * 2. Remote device (MI_REMOTE_CONTROLLER);
  * 			
  * */
 typedef enum{
-	WIFI_CONFIG,   
 	STD_AUTHEN,
 	REMOTE_CONTROL,
 }mible_function_t;
@@ -130,6 +128,7 @@ typedef struct{
 typedef void (*mible_std_auth_callback_t)(mible_std_auth_evt_t evt,
 		mible_std_auth_evt_param_t* param);
 
+#if defined(WIFI_CONFIG)
 /*
  * @TYPE	wifi_info_t
  * @brief	wifi config parameters
@@ -182,6 +181,7 @@ typedef void (*mible_wifi_config_callback_t)(mible_wifi_config_evt_t evt,
 
 mible_status_t notify_wifi_status(uint8_t status);
 
+#endif 
 /*
  * @brief 	Gatts infomation initialization
  * @param 	[IN] info: TYPE device_info
@@ -204,11 +204,13 @@ mible_status_t mible_server_miservice_init(void);
  * */
 int mible_std_auth_evt_register(mible_std_auth_callback_t cb);
 
+#if defined(WIFI_CONFIG)
 /*
  * @brief	Register mible wifi config event
  * @note 	Application invokes this api to register callback
  * */
 int mible_wifi_config_evt_register(mible_wifi_config_callback_t cb);
+#endif
 /*
  * @brief 	Encrypt data by TOKEN
  * @param 	[IN] in: data to be encrypted
