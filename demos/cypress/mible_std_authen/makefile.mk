@@ -25,7 +25,7 @@
 ########################################################################
 # Add Application sources here.
 ########################################################################
-$(NAME)_COMPONENTS := mijia_std_authen_wiced6x_20706_1_1_2.a
+$(NAME)_COMPONENTS := mijia_std_authen_wiced_20706_v1.0.4.a
 
 APP_SRC = ../portable/aes.c
 APP_SRC += ../portable/wiced_api.c
