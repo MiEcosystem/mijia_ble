@@ -1,7 +1,7 @@
 此分支为telink平台的米家蓝牙标准接入SDK，在原厂SDK 3.2基础上提供库以及示例demo。
 
-##使用
-1、联系telink技术支持下载SDK 3.2 here(http://www.telink-semi.cn/viewtopic.php?f=7&t=644)
+###使用
+1、联系telink技术支持下载SDK 3.2 [here](http://www.telink-semi.cn/viewtopic.php?f=7&t=644)
 
 建议将SDK下载到硬盘根目录下，过长的目录可能会导致编译失败
 
