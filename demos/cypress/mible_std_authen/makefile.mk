@@ -22,13 +22,33 @@
 # to indemnify Cypress against all liability.
 #
 
+#all the bring-up logs from Cypress are enabled to use following flag
+#if this flag is enbaled, MI_LOG_ENABLED must be enbaled concurrently
+#C_FLAGS += -DCY_BRINGUP_LOG_ENABLE
+
+#Enable Xiaomi log
+#C_FLAGS += -DMI_LOG_ENABLED
+
+#if useing Cypress encription, define this flag to 1
+#USE_CY_AES128_CRYPT := 1
+
+#STRONG_BONDING, 0x3a2/930
+#WEAK_BONDING,   0x9c/156
+C_FLAGS += -DPRODUCT_ID=930                   
+
 ########################################################################
 # Add Application sources here.
 ########################################################################
 $(NAME)_COMPONENTS := mijia_std_authen_wiced_20706_v1.0.4.a
 
-APP_SRC = ../portable/aes.c
-APP_SRC += ../portable/wiced_api.c
+APP_SRC = ../portable/wiced_api.c
+
+ifneq ($(USE_CY_AES128_CRYPT),1)
+APP_SRC += ../portable/aes.c
+else
+C_FLAGS += -DUSE_CY_AES128_ENCRYPT
+endif
+
 APP_SRC +=../../../libs/common/ccm.c
 APP_SRC +=../../../libs/common/mible_beacon.c
 APP_SRC +=../../../libs/common/queue.c

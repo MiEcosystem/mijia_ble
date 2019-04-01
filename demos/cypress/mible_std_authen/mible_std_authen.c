@@ -78,6 +78,14 @@
 #include "mible_api.h"
 #include "mible_wiced.h"
 
+//STRONG_BONDING, 0x3a2/930
+//WEAK_BONDING,   0x9c/156
+
+device_info dev_info = {
+        .bonding = STRONG_BONDING,
+        .pid = PRODUCT_ID,
+        .version = "0000",
+};
 
 /******************************************************************************
  *                                Constants
@@ -296,8 +304,7 @@ static void                     hello_sensor_load_keys_for_address_resolution( v
 /******************************************************************************
  *                          Function Definitions
  ******************************************************************************/
-static void std_authen_event_cb(mible_std_auth_evt_t evt,
-        mible_std_auth_evt_param_t* param);
+
 /*
  *  Entry point to the application. Set device configuration and start BT
  *  stack initialization.  The actual application initialization will happen
@@ -1124,57 +1131,8 @@ static void hello_sensor_load_keys_for_address_resolution( void )
     }
     WICED_BT_TRACE("hello_sensor_load_keys_for_address_resolution %B result:%d \n", p, result );
 }
-static void mible_service_init_cmp(void)
-{
-    MI_LOG_INFO("mible_service_init_cmp\r\n");
-}
 
-static void mible_connected(void)
-{
-    MI_LOG_INFO("mible_connected \r\n");
-}
 
-static void mible_disconnected(void)
-{
-    MI_LOG_INFO("mible_disconnected \r\n");
-    //advertising_init();
-    advertising_start();
-}
 
-static void mible_bonding_evt_callback(mible_bonding_state state)
-{
-    if(state == BONDING_FAIL){
-        MI_LOG_INFO("BONDING_FAIL\r\n");
-        mible_gap_disconnect(mible_server_connection_handle);
-    }else if(state == BONDING_SUCC){
-        MI_LOG_INFO("BONDING_SUCC\r\n");
-    }else if(state == LOGIN_FAIL){
-        MI_LOG_INFO("LOGIN_FAIL\r\n");
-        mible_gap_disconnect(mible_server_connection_handle);
-    }else{
-        MI_LOG_INFO("LOGIN_SUCC\r\n");
-    }
-}
 
-void std_authen_event_cb(mible_std_auth_evt_t evt,
-        mible_std_auth_evt_param_t* p_param)
-{
-    switch(evt){
-    case MIBLE_STD_AUTH_EVT_SERVICE_INIT_CMP:
-        mible_service_init_cmp();
-        break;
-    case MIBLE_STD_AUTH_EVT_CONNECT:
-        mible_gap_adv_stop();
-        mible_connected();
-        break;
-    case MIBLE_STD_AUTH_EVT_DISCONNECT:
-        mible_disconnected();
-        break;
-    case MIBLE_STD_AUTH_EVT_RESULT:
-        mible_bonding_evt_callback(p_param->result.state);
-        break;
-    default:
-        MI_LOG_ERROR("Unkown std authen event\r\n");
-        break;
-    }
-}
+
