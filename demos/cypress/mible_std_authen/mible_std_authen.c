@@ -76,7 +76,7 @@
 #endif
 
 #include "mible_api.h"
-#include "mible_wiced.h"
+#include "wiced_bridge.h"
 
 //STRONG_BONDING, 0x3a2/930
 //WEAK_BONDING,   0x9c/156

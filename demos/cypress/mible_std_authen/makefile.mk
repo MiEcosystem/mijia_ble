@@ -21,6 +21,8 @@
 #  manufacturer of such system or application assumes  all risk of such use and in doing so agrees 
 # to indemnify Cypress against all liability.
 #
+C_FLAGS += -DWICED_BT_TRACE_ENABLE
+C_FLAGS += -DENABLE_HCI_TRACE
 
 #all the bring-up logs from Cypress are enabled to use following flag
 #if this flag is enbaled, MI_LOG_ENABLED must be enbaled concurrently
@@ -30,7 +32,7 @@
 #C_FLAGS += -DMI_LOG_ENABLED
 
 #if useing Cypress encription, define this flag to 1
-#USE_CY_AES128_CRYPT := 1
+USE_CY_AES128_CRYPT := 1
 
 #STRONG_BONDING, 0x3a2/930
 #WEAK_BONDING,   0x9c/156
@@ -56,7 +58,7 @@ APP_SRC +=../../../libs/common/sha256_hkdf.c
 APP_SRC += mible_std_authen.c
 APP_SRC += wiced_bt_cfg.c
 
-C_FLAGS += -DWICED_BT_TRACE_ENABLE -std=c99
+C_FLAGS +=  -std=c99
 
 # -std=c99, -std=gnu99, -std=c11 or -std=gnu11
 
