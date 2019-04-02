@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GBK"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="configPkg" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/app_ble_prm3.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/ti/simplelink_cc2640r2_sdk_2_40_00_32/examples/rtos/CC2640R2_LAUNCHXL/ble5stack/mible_authen/tirtos/app_ble.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/app_ble_prm3.mak" src="package.bld"/>
+        <srcFile name="package/cfg/app_ble_prm3.orm3.dep" src="package/cfg/app_ble_prm3.c"/>
+        <srcFile name="package/cfg/app_ble_prm3.dep" src="package/cfg/app_ble_prm3.cfg"/>
+        <srcFile name="package/cfg/app_ble.xrm3.mak" src="package.bld"/>
+        <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="iar.targets.arm.M3"
+            version="iar.targets.arm.M3{1,0,8.32,1"
+            rawVersion="8.32.1.169"
+            platform="ti.platforms.tiva:TM4C1294NCPDT:1"
+            isa="v7M"
+            suffix="rm3"
+            rootDir="C:/PROGRA~2/IARSYS~1/EMBEDD~2.2/arm"
+            os="undefined"
+            rts="iar.targets.arm.rts">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="app_ble"
+        pname="app_ble.prm3"
+        target="iar.targets.arm.M3"
+        platform="ti.platforms.simplelink:CC2640R2F"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/app_ble_prm3.cfg"
+        xCfgPrefix="package/cfg/app_ble_prm3"
+        cfgScript="C:/ti/simplelink_cc2640r2_sdk_2_40_00_32/examples/rtos/CC2640R2_LAUNCHXL/ble5stack/mible_authen/tirtos/app_ble.cfg"
+        cfgArgs="NO_ROM%253D0"
+        />
+    </configurations>
+    <executables>
+    <executable name="app_ble"
+        pname="app_ble.xrm3"
+        target="iar.targets.arm.M3"
+        platform="ti.platforms.simplelink:CC2640R2F"
+        profile="release"
+        xCfgScript="package/cfg/app_ble_prm3.cfg"
+        xCfgPrefix="package/cfg/app_ble_prm3"
+        cfgScript="C:/ti/simplelink_cc2640r2_sdk_2_40_00_32/examples/rtos/CC2640R2_LAUNCHXL/ble5stack/mible_authen/tirtos/app_ble.cfg"
+        cfgArgs="NO_ROM%253D0"
+        />
+    </executables>
+    <tests>
+    <test exeName="app_ble.xrm3"
+        args=""
+        groupName="app_ble.xrm3"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="configPkg"
+        pname="configPkg.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

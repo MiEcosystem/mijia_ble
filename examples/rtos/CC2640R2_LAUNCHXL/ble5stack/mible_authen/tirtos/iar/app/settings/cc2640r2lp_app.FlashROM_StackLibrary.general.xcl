@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armxds2.dll" 
+
+"C:\ti\simplelink_cc2640r2_sdk_2_40_00_32\examples\rtos\CC2640R2_LAUNCHXL\ble5stack\mible_authen\tirtos\iar\app\FlashROM_StackLibrary\Exe\ble5_mible_test_cc2640r2lp_app_FlashROM_StackLibrary.out" 
+
+--plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\config\debugger\TexasInstruments\CC26x0.dmac" 
+
+--flash_loader="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\config\flashloader\TexasInstruments\FlashCC26x0F128RAM20.board" 
+
+
+
+

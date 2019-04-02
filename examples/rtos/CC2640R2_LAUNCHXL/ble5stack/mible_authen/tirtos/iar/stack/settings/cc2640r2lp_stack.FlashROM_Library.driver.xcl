@@ -1,0 +1,21 @@
+"--endian=little" 
+
+"--cpu=Cortex-M3" 
+
+"--fpu=None" 
+
+"-p" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CONFIG\debugger\TexasInstruments\CC2640R2F.ddf" 
+
+"--semihosting=none" 
+
+"--device=CC2640R2F" 
+
+"--xds_hib_address=0x10001628,0x10000F6C" 
+
+"--multicore_nr_of_cores=1" 
+
+
+
+
