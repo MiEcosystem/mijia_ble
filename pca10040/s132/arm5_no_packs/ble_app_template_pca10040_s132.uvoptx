@@ -1304,8 +1304,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf52_1_1_3_8f564473.lib</PathWithFileName>
-      <FilenameWithoutPath>mijia_std_authen_keil_nrf52_1_1_3_8f564473.lib</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</PathWithFileName>
+      <FilenameWithoutPath>mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

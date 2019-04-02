@@ -3256,9 +3256,9 @@
           <GroupName>mijia_ble_libs/mible_app_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_nrf52_1_1_3_8f564473.lib</FileName>
+              <FileName>mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf52_1_1_3_8f564473.lib</FilePath>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FilePath>
             </File>
           </Files>
         </Group>
@@ -6418,9 +6418,9 @@
           <GroupName>mijia_ble_libs/mible_app_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_nrf52_1_1_3_8f564473.lib</FileName>
+              <FileName>mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf52_1_1_3_8f564473.lib</FilePath>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FilePath>
             </File>
           </Files>
         </Group>
