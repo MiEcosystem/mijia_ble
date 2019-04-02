@@ -1,3 +1,0 @@
-[submodule "libs/common"]
-	path = libs/common
-	url = https://github.com/MiEcosystem/mijia_ble_common.git
