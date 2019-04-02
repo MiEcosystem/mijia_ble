@@ -159,13 +159,13 @@ NRF_BLE_QWR_DEF(m_qwr);                                                         
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
 
 static void std_authen_event_cb(mible_std_auth_evt_t evt,
-		mible_std_auth_evt_param_t* param);
+        mible_std_auth_evt_param_t* param);
 
 /*app variable*/
 device_info dev_info = {
-		.bonding = WEAK_BONDING,//,STRONG_BONDING // can be modified according to product
-		.pid = 156, //,930 // product id, can be modified according to product
-		.version = "0000",  // can be modified according to product
+        .bonding = WEAK_BONDING,//,STRONG_BONDING // can be modified according to product
+        .pid = 156, //,930 // product id, can be modified according to product
+        .version = "0000",  // can be modified according to product
 };
 
 /* YOUR_JOB: Declare all services structure your application is using
@@ -294,14 +294,14 @@ static void nrf_qwr_error_handler(uint32_t nrf_error)
  */
 static void services_init(void)
 {
-	ret_code_t         err_code;
-	nrf_ble_qwr_init_t qwr_init = {0};
+    ret_code_t         err_code;
+    nrf_ble_qwr_init_t qwr_init = {0};
 
-	// Initialize Queued Write Module.
-	qwr_init.error_handler = nrf_qwr_error_handler;
+    // Initialize Queued Write Module.
+    qwr_init.error_handler = nrf_qwr_error_handler;
 
-	err_code = nrf_ble_qwr_init(&m_qwr, &qwr_init);
-	APP_ERROR_CHECK(err_code);
+    err_code = nrf_ble_qwr_init(&m_qwr, &qwr_init);
+    APP_ERROR_CHECK(err_code);
     /* YOUR_JOB: Add code to initialize the services used by the application.
        uint32_t                           err_code;
        ble_yys_init_t                     yys_init;
@@ -314,8 +314,8 @@ static void services_init(void)
        err_code = ble_yy_service_init(&yys_init, &yy_init);
        APP_ERROR_CHECK(err_code);*/
      
-	mible_server_info_init(&dev_info, STD_AUTHEN);
-	mible_server_miservice_init();
+    mible_server_info_init(&dev_info, MODE_STANDARD);
+    mible_server_miservice_init();
 
 }
 
@@ -417,9 +417,9 @@ void mible_on_ble_evt(ble_evt_t const *p_ble_evt);
  */
 static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 {
-	
+    
     ret_code_t err_code = NRF_SUCCESS;
-	
+    
     switch (p_ble_evt->header.evt_id)
     {
         case BLE_GAP_EVT_DISCONNECTED:
@@ -428,7 +428,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             break;
 
         case BLE_GAP_EVT_CONNECTED:
-						NRF_LOG_INFO("Connected.");
+            NRF_LOG_INFO("Connected.");
             err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
             APP_ERROR_CHECK(err_code);
             m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
@@ -487,7 +487,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 //     * Remember to call ble_conn_state_on_ble_evt before calling any ble_conns_state_* functions. */
 //    ble_conn_state_on_ble_evt(p_ble_evt);
 //    ble_conn_params_on_ble_evt(p_ble_evt);
-//	mible_on_ble_evt(p_ble_evt);
+//    mible_on_ble_evt(p_ble_evt);
 //    bsp_btn_ble_on_ble_evt(p_ble_evt);
 //    on_ble_evt(p_ble_evt);
 //    /*YOUR_JOB add calls to _on_ble_evt functions from each service your application is using
@@ -607,9 +607,9 @@ static void advertising_init(void)
         MI_LOG_ERROR("mibeacon_data_set failed. \r\n");
         return;
     }
-	
+    
     uint8_t adv_data[23]={0};
-		uint8_t adv_len=0;
+    uint8_t adv_len=0;
     // add flags
     adv_data[0] = 0x02;
     adv_data[1] = 0x01;
@@ -622,8 +622,8 @@ static void advertising_init(void)
     
     MI_LOG_INFO("adv mi service data:");
     MI_LOG_HEXDUMP(adv_data, adv_len);
-		MI_PRINTF("\r\n");
-	return;
+    MI_PRINTF("\r\n");
+    return;
 }
 
 
@@ -633,7 +633,7 @@ static void advertising_init(void)
  */
 static void buttons_leds_init(bool * p_erase_bonds)
 {
-	  uint32_t err_code;
+      uint32_t err_code;
     bsp_event_t startup_event;
 
     err_code = bsp_init(BSP_INIT_LEDS | BSP_INIT_BUTTONS,
@@ -703,98 +703,98 @@ static void gatt_init(void)
  */
 int main(void)
 {
-		bool erase_bonds;
+    bool erase_bonds;
 
-		// Initialize.
-		log_init();
-		timers_init();
-		MI_LOG_INFO(RTT_CTRL_CLEAR"Compiled  %s %s\n", (uint32_t)__DATE__, (uint32_t)__TIME__);
-		
-		power_management_init();
-		ble_stack_init();
-		gap_params_init();
-		gatt_init();
-		
-		time_init(NULL);
-	  buttons_leds_init(&erase_bonds);  
+    // Initialize.
+    log_init();
+    timers_init();
+    MI_LOG_INFO(RTT_CTRL_CLEAR"Compiled  %s %s\n", (uint32_t)__DATE__, (uint32_t)__TIME__);
+        
+    power_management_init();
+    ble_stack_init();
+    gap_params_init();
+    gatt_init();
+        
+    time_init(NULL);
+    buttons_leds_init(&erase_bonds);  
     conn_params_init();
-	
-	
-	  mible_std_auth_evt_register(std_authen_event_cb);
-		
-	  /* <!> mible_record_create() must be called after ble_stack_init(). */
-	  mible_record_create(0xBEEF,0);
-		services_init();
-	
-  	// Start execution.
-	  //application_timers_start();
-	  advertising_init();
-	  advertising_start();
+    
+    
+    mible_std_auth_evt_register(std_authen_event_cb);
+        
+    /* <!> mible_record_create() must be called after ble_stack_init(). */
+    mible_record_create(0xBEEF,0);
+    services_init();
+    
+    // Start execution.
+    //application_timers_start();
+    advertising_init();
+    advertising_start();
     
     // Enter main loop.
-	  for (;;)
-	  {
-		    if (NRF_LOG_PROCESS() == false)
-		    {
-			      power_manage();			
-			      mible_tasks_exec();
-		    }
-	  }
+    for (;;)
+    {
+        if (NRF_LOG_PROCESS() == false)
+        {
+            power_manage();            
+            mible_tasks_exec();
+        }
+    }
 }
 
 void mible_service_init_cmp(void)
 {
-	MI_LOG_INFO("mible_service_init_cmp\r\n");
+    MI_LOG_INFO("mible_service_init_cmp\r\n");
 }
 
 void mible_connected(void)
 {
-	MI_LOG_INFO("mible_connected \r\n");
+    MI_LOG_INFO("mible_connected \r\n");
 }
 
 void mible_disconnected(void)
 {
-	MI_LOG_INFO("mible_disconnected \r\n");
-	//advertising_init();
-	advertising_start();
+    MI_LOG_INFO("mible_disconnected \r\n");
+    //advertising_init();
+    advertising_start();
 }
 
 void mible_bonding_evt_callback(mible_bonding_state state)
 {
-	if(state == BONDING_FAIL){
-		MI_LOG_INFO("BONDING_FAIL\r\n");
-		mible_gap_disconnect(mible_server_connection_handle);
-	}else if(state == BONDING_SUCC){
-		MI_LOG_INFO("BONDING_SUCC\r\n");
-	}else if(state == LOGIN_FAIL){
-		MI_LOG_INFO("LOGIN_FAIL\r\n");
-		mible_gap_disconnect(mible_server_connection_handle);
-	}else{
-		MI_LOG_INFO("LOGIN_SUCC\r\n");
-	}
+    if(state == BONDING_FAIL){
+        MI_LOG_INFO("BONDING_FAIL\r\n");
+        mible_gap_disconnect(mible_server_connection_handle);
+    }else if(state == BONDING_SUCC){
+        MI_LOG_INFO("BONDING_SUCC\r\n");
+    }else if(state == LOGIN_FAIL){
+        MI_LOG_INFO("LOGIN_FAIL\r\n");
+        mible_gap_disconnect(mible_server_connection_handle);
+    }else{
+        MI_LOG_INFO("LOGIN_SUCC\r\n");
+    }
 }
 
 void std_authen_event_cb(mible_std_auth_evt_t evt,
-		mible_std_auth_evt_param_t* p_param)
+        mible_std_auth_evt_param_t* p_param)
 {
-	switch(evt){
-	case MIBLE_STD_AUTH_EVT_SERVICE_INIT_CMP:
-		mible_service_init_cmp();
-		break;
-	case MIBLE_STD_AUTH_EVT_CONNECT:
-		mible_gap_adv_stop();
-		mible_connected();
-		break;
-	case MIBLE_STD_AUTH_EVT_DISCONNECT:
-		mible_disconnected();
-		break;
-	case MIBLE_STD_AUTH_EVT_RESULT:
-		mible_bonding_evt_callback(p_param->result.state);
-		break;
-	default:
-		MI_LOG_ERROR("Unkown std authen event\r\n");
-		break;
-	}
+    switch(evt){
+    case MIBLE_STD_AUTH_EVT_SERVICE_INIT_CMP:
+        mible_service_init_cmp();
+        break;
+    case MIBLE_STD_AUTH_EVT_CONNECT:
+        mible_gap_adv_stop();
+        mible_connected();
+        break;
+    case MIBLE_STD_AUTH_EVT_DISCONNECT:
+        mible_disconnected();
+        break;
+    case MIBLE_STD_AUTH_EVT_RESULT:
+        mible_bonding_evt_callback(p_param->result.state);
+        break;
+    default:
+        MI_LOG_ERROR("Unkown std authen event\r\n");
+        break;
+    }
 }
 /**
  * @}
