@@ -19,5 +19,7 @@
 
 ### 注意: 
 建议使用下面版本及以上的IAR或CCS
-      IAR Embedded Workbench: EWARM-8.20.2
-      TI Code Composer Studio: CCS-8.3.0.00009
+
+IAR Embedded Workbench: EWARM-8.20.2
+
+TI Code Composer Studio: CCS-8.3.0.00009
