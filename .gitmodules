@@ -1,0 +1,6 @@
+[submodule "source/ti/ble5stack/mible/libs/mijia_ble_common"]
+	path = source/ti/ble5stack/mible/libs/common
+	url = https://github.com/MiEcosystem/mijia_ble_common.git
+[submodule "source/ti/ble5stack/mible/mijia_ble_api"]
+	path = source/ti/ble5stack/mible/portable
+	url = https://github.com/MiEcosystem/mijia_ble_api
