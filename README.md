@@ -22,7 +22,7 @@ $ cd mijia_ble
 
 米家蓝牙标准认证库闭源，请联系 https://iot.mi.com/ 平台申请，详见https://iot.mi.com/guide.html#id=57
 
-4、工程路径：6.0.6.427\projects\target_apps\ble_examples\mijia_app_authen\Keil_5 运行工程
+4、工程路径：\6.0.6.427\projects\target_apps\ble_examples\mijia_ble\demos\Dialog\mible_std_authen\Dialog14585\Keil_5 运行工程
 
 下载程序方式说明和其他开发资料可在https://support.dialog-semiconductor.com/ 中下载
 
@@ -37,3 +37,6 @@ dialog DA14585 没有内部的FLASH可供使用，代码可放置在片外的存
 
 #### 内存问题
 工程默认开启较小的堆内存(1K)    如果需要更多堆内存  可以在da1458x_config_advanced.h  文件打开宏 #define NON_RET_HEAP_SZ         (1024 * 20)    进行系统堆内存设置
+
+### 注意
+目前基于Dialog的米家认证库已升级到v1.1.4
