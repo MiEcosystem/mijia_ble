@@ -7,6 +7,9 @@
 #include "arch_console.h"
 #include "app_easy_timer.h"
 
+static void std_authen_event_cb(mible_std_auth_evt_t evt,
+        mible_std_auth_evt_param_t* param);
+
 static void advertising_init(void);
 static void advertising_start(void);
 /*app variable*/
@@ -25,7 +28,8 @@ device_info dev_info = {
 void simulation_miserver_test(void)
 {
 	MI_LOG_INFO("simulation_miserver_test\r\n");
-	mible_server_info_init(&dev_info);
+	mible_std_auth_evt_register(std_authen_event_cb);
+	mible_server_info_init(&dev_info, MODE_STANDARD);
 	mible_server_miservice_init();
 
 }
@@ -65,6 +69,29 @@ void mible_bonding_evt_callback(mible_bonding_state state)
 		MI_LOG_INFO("LOGIN_SUCC\r\n");
 	}
 
+}
+
+void std_authen_event_cb(mible_std_auth_evt_t evt,
+        mible_std_auth_evt_param_t* p_param)
+{
+    switch(evt){
+    case MIBLE_STD_AUTH_EVT_SERVICE_INIT_CMP:
+        mible_service_init_cmp();
+        break;
+    case MIBLE_STD_AUTH_EVT_CONNECT:
+        mible_gap_adv_stop();
+        mible_connected();
+        break;
+    case MIBLE_STD_AUTH_EVT_DISCONNECT:
+        mible_disconnected();
+        break;
+    case MIBLE_STD_AUTH_EVT_RESULT:
+        mible_bonding_evt_callback(p_param->result.state);
+        break;
+    default:
+        MI_LOG_ERROR("Unkown std authen event\r\n");
+        break;
+    }
 }
 
 /**@brief Function for initializing the Advertising functionality.
