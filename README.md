@@ -25,3 +25,5 @@ Nordic52工程路径：mijia_ble/demos/Nordic/mible_std_authen/pca10040/s132/arm
 
 ### 注意
 nRF5 SDK已升级到15.2，后续Nordic52平台的开发建议在[Nordic_SDK15.2分支](https://github.com/MiEcosystem/mijia_ble/tree/Nordic_SDK15.2)进行
+
+认证库版本已升级到1.1.4
