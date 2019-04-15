@@ -137,6 +137,9 @@
 
 #define DEAD_BEEF                       0xDEADBEEF                                  /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
 
+static void std_authen_event_cb(mible_std_auth_evt_t evt,
+        mible_std_auth_evt_param_t* param);
+
 
 /*app variable*/
 device_info dev_info = {
@@ -269,7 +272,7 @@ static void services_init(void)
        err_code = ble_yy_service_init(&yys_init, &yy_init);
        APP_ERROR_CHECK(err_code);
      */
-	mible_server_info_init(&dev_info);
+	mible_server_info_init(&dev_info, MODE_STANDARD);
 	mible_server_miservice_init();
 
 }
@@ -692,6 +695,8 @@ int main(void)
   ble_stack_init();
   gap_params_init();
   conn_params_init();
+	
+	mible_std_auth_evt_register(std_authen_event_cb);
 
 	/* <!> mible_record_create() must be called after ble_stack_init(). */
 	mible_record_create(0xBEEF,0);
@@ -742,6 +747,29 @@ void mible_bonding_evt_callback(mible_bonding_state state)
 	}else{
 		MI_LOG_INFO("LOGIN_SUCC\r\n");
 	}
+}
+
+void std_authen_event_cb(mible_std_auth_evt_t evt,
+        mible_std_auth_evt_param_t* p_param)
+{
+    switch(evt){
+    case MIBLE_STD_AUTH_EVT_SERVICE_INIT_CMP:
+        mible_service_init_cmp();
+        break;
+    case MIBLE_STD_AUTH_EVT_CONNECT:
+        mible_gap_adv_stop();
+        mible_connected();
+        break;
+    case MIBLE_STD_AUTH_EVT_DISCONNECT:
+        mible_disconnected();
+        break;
+    case MIBLE_STD_AUTH_EVT_RESULT:
+        mible_bonding_evt_callback(p_param->result.state);
+        break;
+    default:
+        MI_LOG_ERROR("Unkown std authen event\r\n");
+        break;
+    }
 }
 /**
  * @}
