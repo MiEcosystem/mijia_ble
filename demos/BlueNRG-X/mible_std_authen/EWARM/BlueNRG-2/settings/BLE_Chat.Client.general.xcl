@@ -1,12 +1,12 @@
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armproc.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0_3\arm\bin\armproc.dll" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armstlink2.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0_3\arm\bin\armstlink2.dll" 
 
-"C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\BLE_Chat\EWARM\BlueNRG-2\Client\Exe\BlueNRG-1_BLE_Chat_Client.out" 
+"C:\Users\guoch\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\BLE_Chat - MI\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-2\Client\Exe\BLE_Chat_Client.out" 
 
---plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0_3\arm\bin\armbat.dll" 
 
---flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\config\flashloader\ST\BlueNRG-2.board" 
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0_3\arm\config\flashloader\ST\BlueNRG-2.board" 
 
 
 

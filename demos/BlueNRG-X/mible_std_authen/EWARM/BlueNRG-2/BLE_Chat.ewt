@@ -5933,6 +5933,9 @@
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\src\gp_timer.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\src\miscutil.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\src\osal.c</name>
         </file>
     </group>
@@ -6030,6 +6033,12 @@
         </group>
     </group>
     <group>
+        <name>OTA</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\OTA\src\OTA_btl.c</name>
+        </file>
+    </group>
+    <group>
         <name>Platform_Layers</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\src\SDK_EVAL_Button.c</name>
@@ -6078,6 +6087,12 @@
         <name>Stack</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\library\libbluenrg1_stack.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\cryptolib\libcrypto.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\src\stack_user_cfg.c</name>
         </file>
     </group>
     <group>

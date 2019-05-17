@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\mijia_ble-ST-bluenrg-x\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.general.xcl" --backend -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\mijia_ble-ST-bluenrg-x\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\yangyufeng\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\mijia_ble\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.general.xcl" --backend -f "C:\Users\yangyufeng\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\mijia_ble\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\mijia_ble-ST-bluenrg-x\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.general.xcl" --debug_file=$debugfile --backend -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\mijia_ble-ST-bluenrg-x\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\yangyufeng\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\mijia_ble\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\yangyufeng\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\mijia_ble\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-1\settings\BLE_Chat.Server.driver.xcl" 
 }

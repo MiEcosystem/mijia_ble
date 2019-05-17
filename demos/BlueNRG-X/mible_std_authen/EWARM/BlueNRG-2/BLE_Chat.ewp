@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Automatic choice of formatter, without multibyte support.</state>
+                    <state>Automatic choice of formatter.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Automatic choice of formatter, without multibyte support.</state>
+                    <state>Automatic choice of formatter.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.22.1.15696</state>
+                    <state>8.22.2.15993</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -219,11 +219,13 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state>BLUENRG2_DEVICE</state>
-                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
                     <state>LS_SOURCE=LS_SOURCE_EXTERNAL_32KHZ</state>
                     <state>SMPS_INDUCTOR=SMPS_INDUCTOR_10uH</state>
                     <state>CLIENT=1</state>
+                    <state>BLE_STACK_CONFIGURATION=BLE_STACK_FULL_CONFIGURATION</state>
+                    <state>BLUENRG2_DEVICE</state>
+                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
+                    <state>USER_BUTTON=BUTTON_1</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -348,13 +350,15 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\..\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\Library\hal\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BlueNRG1_Periph_Driver\inc</state>
+                    <state>$PROJ_DIR$\../../inc</state>
+                    <state>$PROJ_DIR$\../../../../../Library/hal/inc</state>
+                    <state>$PROJ_DIR$\../../../../../Library/BlueNRG1_Periph_Driver/inc</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\OTA\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\layers_inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\Utils\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\OTA\inc</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
                 </option>
                 <option>
@@ -682,7 +686,7 @@
             <archiveVersion>1</archiveVersion>
             <data>
                 <prebuild></prebuild>
-                <postbuild></postbuild>
+                <postbuild>ielftool.exe --bin --verbose "$TARGET_PATH$" "$TARGET_DIR$\BLE_Chat_Client.bin"</postbuild>
             </data>
         </settings>
         <settings>
@@ -694,7 +698,7 @@
                 <debug>1</debug>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>BlueNRG-1_BLE_Chat_Client.out</state>
+                    <state>BLE_Chat_Client.out</state>
                 </option>
                 <option>
                     <name>IlinkLibIOConfig</name>
@@ -1100,7 +1104,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.22.1.15696</state>
+                    <state>8.22.2.15993</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -1253,11 +1257,12 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state>BLUENRG2_DEVICE</state>
-                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
                     <state>LS_SOURCE=LS_SOURCE_EXTERNAL_32KHZ</state>
                     <state>SMPS_INDUCTOR=SMPS_INDUCTOR_10uH</state>
                     <state>SERVER=1</state>
+                    <state>BLUENRG2_DEVICE</state>
+                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
+                    <state>USER_BUTTON=BUTTON_1</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1382,20 +1387,21 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\BlueNRG1_Periph_Driver\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\CMSIS\Include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\cryptolib\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\libs\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\libs\mible_app_authen</state>
                     <state>$PROJ_DIR$\..\..\..\portable</state>
                     <state>$PROJ_DIR$\..\..\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\BlueNRG1_Periph_Driver\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\library</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\CMSIS\Include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Source</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\OTA\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\BLE_Application\layers_inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\BLE_Application\Utils\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\BLE_Application\Profile_Central\includes</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\BLE_Application\OTA\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1722,7 +1728,7 @@
             <archiveVersion>1</archiveVersion>
             <data>
                 <prebuild></prebuild>
-                <postbuild></postbuild>
+                <postbuild>ielftool.exe --bin --verbose "$TARGET_PATH$" "$TARGET_DIR$\BLE_Chat_Server.bin"</postbuild>
             </data>
         </settings>
         <settings>
@@ -1734,7 +1740,7 @@
                 <debug>1</debug>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>BlueNRG-1_BLE_Chat_Server.out</state>
+                    <state>BLE_Chat_Server.out</state>
                 </option>
                 <option>
                     <name>IlinkLibIOConfig</name>
@@ -2140,7 +2146,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>7.40.3.8937</state>
+                    <state>7.70.1.11471</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -2293,12 +2299,15 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state>BLUENRG2_DEVICE</state>
-                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
                     <state>LS_SOURCE=LS_SOURCE_EXTERNAL_32KHZ</state>
                     <state>SMPS_INDUCTOR=SMPS_INDUCTOR_10uH</state>
                     <state>SERVER=1</state>
                     <state>ST_OTA_LOWER_APPLICATION=1</state>
+                    <state>BLUENRG2_DEVICE</state>
+                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
+                    <state>USER_BUTTON=BUTTON_1</state>
+                    <state>OTA_EXTENDED_PACKET_LEN=1</state>
+                    <state>BLE_STACK_CONFIGURATION=BLE_OTA_BASIC_CONFIGURATION</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -2429,7 +2438,9 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\OTA\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\layers_inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\Utils\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\OTA\inc</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
                 </option>
                 <option>
@@ -2757,7 +2768,7 @@
             <archiveVersion>1</archiveVersion>
             <data>
                 <prebuild></prebuild>
-                <postbuild>ielftool.exe --bin --verbose "$PROJ_DIR$\Server_LowerApp_OTA\Exe\BLE_Chat_Server_LowerApp_OTA.out"  "$PROJ_DIR$\Server_LowerApp_OTA\Exe\BLE_Chat_Server_LowerApp_OTA.bin"</postbuild>
+                <postbuild>ielftool.exe --bin --verbose "$TARGET_PATH$" "$TARGET_DIR$\BLE_Chat_Server_LowerApp_OTA.bin"</postbuild>
             </data>
         </settings>
         <settings>
@@ -3226,7 +3237,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>26</version>
-                    <state>34</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -3328,12 +3339,15 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state>BLUENRG2_DEVICE</state>
-                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
                     <state>LS_SOURCE=LS_SOURCE_EXTERNAL_32KHZ</state>
                     <state>SMPS_INDUCTOR=SMPS_INDUCTOR_10uH</state>
                     <state>SERVER=1</state>
                     <state>ST_OTA_HIGHER_APPLICATION=1</state>
+                    <state>BLUENRG2_DEVICE</state>
+                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
+                    <state>USER_BUTTON=BUTTON_1</state>
+                    <state>OTA_EXTENDED_PACKET_LEN=1</state>
+                    <state>BLE_STACK_CONFIGURATION=BLE_OTA_BASIC_CONFIGURATION</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -3464,7 +3478,9 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\OTA\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\layers_inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\Utils\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\OTA\inc</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
                 </option>
                 <option>
@@ -3792,7 +3808,7 @@
             <archiveVersion>1</archiveVersion>
             <data>
                 <prebuild></prebuild>
-                <postbuild>ielftool.exe --bin --verbose "$PROJ_DIR$\Server_HigherApp_OTA\Exe\BLE_Chat_Server_HigherApp_OTA.out" "$PROJ_DIR$\Server_HigherApp_OTA\Exe\BLE_Chat_Server_HigherApp_OTA.bin"</postbuild>
+                <postbuild>ielftool.exe --bin --verbose "$TARGET_PATH$" "$TARGET_DIR$\BLE_Chat_Server_HigherApp_OTA.bin"</postbuild>
             </data>
         </settings>
         <settings>
@@ -4261,7 +4277,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>26</version>
-                    <state>34</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -4278,11 +4294,11 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>26</version>
-                    <state>34</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>BlueNRG-2	ST BlueNRG-2</state>
+                    <state>BlueNRG-1	ST BlueNRG-1</state>
                 </option>
                 <option>
                     <name>FPU2</name>
@@ -4301,7 +4317,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>26</version>
-                    <state>34</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -4363,12 +4379,13 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
-                    <state>BLUENRG2_DEVICE</state>
-                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
                     <state>LS_SOURCE=LS_SOURCE_EXTERNAL_32KHZ</state>
                     <state>SMPS_INDUCTOR=SMPS_INDUCTOR_10uH</state>
                     <state>SERVER=1</state>
                     <state>ST_USE_OTA_SERVICE_MANAGER_APPLICATION=1</state>
+                    <state>BLUENRG2_DEVICE</state>
+                    <state>HS_SPEED_XTAL=HS_SPEED_XTAL_32MHZ</state>
+                    <state>USER_BUTTON=BUTTON_1</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -4499,7 +4516,9 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Device\ST\BlueNRG1\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\Library\Bluetooth_LE\OTA\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\layers_inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\Utils\inc</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\OTA\inc</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\inc</state>
                 </option>
                 <option>
@@ -4827,7 +4846,7 @@
             <archiveVersion>1</archiveVersion>
             <data>
                 <prebuild></prebuild>
-                <postbuild>ielftool.exe --bin --verbose "$PROJ_DIR$\Server_Use_OTA_ServiceManager\Exe\BLE_Chat_Server_Use_OTA_ServiceManager.out"  "$PROJ_DIR$\Server_Use_OTA_ServiceManager\Exe\BLE_Chat_Server_Use_OTA_ServiceManager.bin"</postbuild>
+                <postbuild>ielftool.exe --bin --verbose "$TARGET_PATH$" "$TARGET_DIR$\BLE_Chat_Server_Use_OTA_ServiceManager.bin"</postbuild>
             </data>
         </settings>
         <settings>
@@ -5192,6 +5211,9 @@
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\src\gp_timer.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\src\miscutil.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\hal\src\osal.c</name>
         </file>
     </group>
@@ -5289,6 +5311,16 @@
         </group>
     </group>
     <group>
+        <name>OTA</name>
+        <excluded>
+            <configuration>Client</configuration>
+            <configuration>Server</configuration>
+        </excluded>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\Library\BLE_Application\OTA\src\OTA_btl.c</name>
+        </file>
+    </group>
+    <group>
         <name>Platform_Layers</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\SDK_Eval_BlueNRG1\src\SDK_EVAL_Button.c</name>
@@ -5337,6 +5369,12 @@
         <name>Stack</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\library\libbluenrg1_stack.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\cryptolib\libcrypto.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\Library\Bluetooth_LE\src\stack_user_cfg.c</name>
         </file>
     </group>
     <group>

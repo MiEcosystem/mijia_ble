@@ -4,31 +4,32 @@
   <project>
     <path>$WS_DIR$\BLE_Chat.ewp</path>
   </project>
-  <batchBuild>
+<batchBuild>
     <batchDefinition>
       <name>BUILD_ALL</name>
-      <member>
+    <member>
         <project>BLE_Chat</project>
-        <configuration>Client</configuration>
+      <configuration>Client</configuration>
       </member>
-      <member>
+    <member>
         <project>BLE_Chat</project>
-        <configuration>Server</configuration>
+      <configuration>Server</configuration>
       </member>
-      <member>
+    <member>
         <project>BLE_Chat</project>
-        <configuration>Server_HigherApp_OTA</configuration>
+      <configuration>Server_HigherApp_OTA</configuration>
       </member>
-      <member>
+    <member>
         <project>BLE_Chat</project>
-        <configuration>Server_LowerApp_OTA</configuration>
+      <configuration>Server_LowerApp_OTA</configuration>
       </member>
-      <member>
+    <member>
         <project>BLE_Chat</project>
-        <configuration>Server_Use_OTA_ServiceManager</configuration>
+      <configuration>Server_Use_OTA_ServiceManager</configuration>
       </member>
     </batchDefinition>
   </batchBuild>
 </workspace>
+
 
 

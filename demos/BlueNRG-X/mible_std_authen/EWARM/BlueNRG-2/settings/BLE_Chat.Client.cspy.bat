@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\BLE_Chat\EWARM\BlueNRG-2\settings\BLE_Chat.Client.general.xcl" --backend -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\BLE_Chat\EWARM\BlueNRG-2\settings\BLE_Chat.Client.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0_3\common\bin\cspybat" -f "C:\Users\guoch\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\BLE_Chat - MI\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-2\settings\BLE_Chat.Client.general.xcl" --backend -f "C:\Users\guoch\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\BLE_Chat - MI\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-2\settings\BLE_Chat.Client.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\BLE_Chat\EWARM\BlueNRG-2\settings\BLE_Chat.Client.general.xcl" "--debug_file=%~1" --backend -f "C:\Program Files (x86)\STMicroelectronics\BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples\BLE_Chat\EWARM\BlueNRG-2\settings\BLE_Chat.Client.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0_3\common\bin\cspybat" -f "C:\Users\guoch\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\BLE_Chat - MI\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-2\settings\BLE_Chat.Client.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\guoch\ST\BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples\BLE_Chat - MI\demos\BlueNRG-X\mible_std_authen\EWARM\BlueNRG-2\settings\BLE_Chat.Client.driver.xcl" 
 
 @echo off 
 :end
