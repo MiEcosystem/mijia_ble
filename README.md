@@ -2,17 +2,17 @@
 
 ### 使用
 
-1、 先到ST官网搜索STSW-BLUENRG1-DK 注册并获取低功耗蓝牙sdk2.6.0 
+1、 先到ST官网搜索STSW-BLUENRG1-DK 注册并获取低功耗蓝牙sdk3.1.0 
 
 http://www.st.com/content/st_com/en/products/embedded-software/evaluation-tool-software/stsw-bluenrg1-dk.html
 
 2、进入SDK目录
 ```
-cd BlueNRG-1_2 DK 2.6.0\Project\BLE_Examples
+cd BlueNRG-1_2 DK 3.1.0\Project\BLE_Examples
 git clone -b ST --recursive https://github.com/MiEcosystem/mijia_ble.git
 ```
 
-3、将从米家开放平台上申请得到的mijia_std_authen_IAR_BLUENRG-1_1_1_2.a
+3、将从米家开放平台上申请得到的mijia_std_authen_IAR_BLUENRG-1_1_1_4.a
 
 拷贝到mijia_ble\libs\mible_app_authen文件夹下，米家蓝牙标准认证库闭源，请联系 https://iot.mi.com/ 平台申请，详见https://iot.mi.com/guide.html#id=57
 
