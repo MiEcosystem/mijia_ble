@@ -15,7 +15,11 @@ cd in SDK 15.2.0\examples\ble_peripheral\ directory.
 
 米家蓝牙标准认证库闭源，请联系 https://iot.mi.com/ 平台申请，详见https://iot.mi.com/guide.html#id=57
 
-4、Nordic52工程路径：mijia_ble\pca10040\s132\arm5_no_packs
+4、此分支支持Nordic52系列的52832和52810，请根据芯片型号选择对应的工程路径
+
+Nordic52832工程路径：mijia_ble\pca10040\s132\arm5_no_packs
+
+Nordic52810工程路径：mijia_ble\pca10040e\s112\arm5_no_packs
 
 可以在KEIL5中运行
 
