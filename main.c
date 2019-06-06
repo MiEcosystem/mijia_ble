@@ -722,8 +722,6 @@ int main(void)
     
     mible_std_auth_evt_register(std_authen_event_cb);
         
-    /* <!> mible_record_create() must be called after ble_stack_init(). */
-    mible_record_create(0xBEEF,0);
     services_init();
     
     // Start execution.
