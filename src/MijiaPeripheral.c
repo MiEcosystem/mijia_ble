@@ -225,11 +225,38 @@ void timer_callback(void* arv)
 	// mible_gatts_value_set(0,40,0,tempDat,tempLen);
 	mible_gatts_notify_or_indicate(0,0,40,0,tempDat,tempLen,0);
 }
+#define BLE_GATEWAY_TEST	0
+#if BLE_GATEWAY_TEST
+#include "mible_beacon.h"
+static void * gatewaytest_timer;
+static void enqueue_new_objs(void)
+{
+    static int16_t temp;
+    static int16_t hum;
+    static int8_t  battery;
+
+    temp = temp < 500 ? temp + 1 : -500;
+    mibeacon_obj_enque(MI_STA_TEMPERATURE, sizeof(temp), &temp);
+
+    hum = hum < 1000 ? hum + 1 : 0;
+    mibeacon_obj_enque(MI_STA_HUMIDITY, sizeof(hum), &hum);
+
+    battery = battery < 100 ? battery + 1 : 0;
+    mibeacon_obj_enque(MI_STA_BATTERY, sizeof(battery), &battery);
+}
+static void gatewaytest_handler(void * p_context)
+{
+	enqueue_new_objs();
+}
+#endif
+
+#include "mible_server.h"
+extern device_info dev_info;
 void MijiaPeripheral_Init( uint8 task_id )
 {
     MijiaPeripheral_TaskID = task_id;
 
-	osal_memcpy((void *)0x1fff11f9,defaultAddr,6);	//modify device MAC address
+		osal_memcpy((void *)0x1fff11f9,defaultAddr,6);	//modify device MAC address
 
     // Initialize GATT attributes
     GGS_AddService( GATT_ALL_SERVICES );            // GAP
@@ -268,6 +295,15 @@ void MijiaPeripheral_Init( uint8 task_id )
 
     // Setup a delayed profile startup
     osal_set_event( MijiaPeripheral_TaskID, SBP_START_DEVICE_EVT );
+
+#if BLE_GATEWAY_TEST
+	{
+		uint32_t delay_ms=10000;
+		MI_LOG_INFO("start object adv after %d ms\n", delay_ms);
+		mible_timer_create(&gatewaytest_timer,gatewaytest_handler,MIBLE_TIMER_REPEATED);
+		mible_timer_start(gatewaytest_timer,delay_ms,NULL);
+	}
+#endif
 
 	#if 0   //测试mible record使用的函数
     char *  dataIn = "123456789012345678901234567890";
@@ -552,7 +588,7 @@ static void MijiaPeripheralStateNotificationCB( gaprole_States_t newState )
 
         case GAPROLE_WAITING:
 			LOG("Disconnected\n");
-            gap_evt_dispatch(MIBLE_GAP_EVT_DISCONNET);
+            gap_evt_dispatch(MIBLE_GAP_EVT_DISCONNECT);
             break;
 
         case GAPROLE_WAITING_AFTER_TIMEOUT:

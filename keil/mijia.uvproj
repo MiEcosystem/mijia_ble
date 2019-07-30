@@ -10,8 +10,6 @@
       <TargetName>cst92f30</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>CST92F30</Device>
@@ -50,7 +48,7 @@
           <OutputName>cst92f30</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -84,8 +82,6 @@
             <UserProg2Name>fromelf.exe .\Objects\cst92f30.axf --i32combined --output .\Bin\cst92f30.hex</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
-            <nStopA1X>0</nStopA1X>
-            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -229,7 +225,6 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
-            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -363,18 +358,10 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>0</uGnu>
             <useXO>0</useXO>
-            <v6Lang>1</v6Lang>
-            <v6LangP>1</v6LangP>
-            <vShortEn>1</vShortEn>
-            <vShortWch>1</vShortWch>
-            <v6Lto>0</v6Lto>
-            <v6WtE>0</v6WtE>
-            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>MI_AUTOTEST PRODUCT_ID=156</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\components\ble\controller;..\..\..\..\components\ble\hci;..\..\..\..\components\ble\host;..\..\..\..\components\ble\include;..\..\..\..\components\cmsis\device;..\..\..\..\components\cmsis\include;..\..\..\..\components\driver;..\..\..\..\components\inc;..\..\..\..\components\osal\include;..\..\..\..\components\profiles\DevInfo;..\..\..\..\components\profiles\GATT;..\..\..\..\components\profiles\Roles;..\..\..\..\components\profiles\MijiaProfile;..\..\..\..\libraries;..\src;..\..\..\..\external\cs_printf;..\src\mijia_libs\mijia_ble_common;..\src\mijia_libs\mible_app_authen;..\src\mijia_ble_api</IncludePath>
             </VariousControls>
@@ -389,7 +376,6 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -626,9 +612,9 @@
               <FilePath>..\src\mijia_libs\mijia_ble_common\sha256_hkdf.c</FilePath>
             </File>
             <File>
-              <FileName>mible_app_authen.lib</FileName>
+              <FileName>mijia_std_authen_keil_CST92F30_1_1_4_bf8b0b6b.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\src\mijia_libs\mible_app_authen\mible_app_authen.lib</FilePath>
+              <FilePath>..\src\mijia_libs\mible_app_authen\mijia_std_authen_keil_CST92F30_1_1_4_bf8b0b6b.lib</FilePath>
             </File>
           </Files>
         </Group>

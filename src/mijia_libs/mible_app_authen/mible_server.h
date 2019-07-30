@@ -236,21 +236,21 @@ void mible_std_server_decrypt(uint8_t *in, uint16_t inLen, uint8_t *out);
  * @note    Only work when strict_bind_confirm == 1; see "mible_server_info_init"
  *
  */
-void mible_std_auth_permit_bind();
+void mible_std_auth_permit_bind(void);
 
 /**
  * @brief   Forbid bind
  * @note    Only work when strict_bind_confirm == 1; see "mible_server_info_init"
  *
  */
-void mible_std_auth_forbid_bind();
+void mible_std_auth_forbid_bind(void);
 
 /**
  * @brief    Delete all token in flash
  *
  * @return mible_status_t
  */
-mible_status_t mible_std_auth_factory_reset();
+mible_status_t mible_std_auth_factory_reset(void);
 
 /*
  * callback handler used by mible_standard_authentication procedure.
