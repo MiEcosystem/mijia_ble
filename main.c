@@ -164,7 +164,7 @@ static void std_authen_event_cb(mible_std_auth_evt_t evt,
 /*app variable*/
 device_info dev_info = {
         .bonding = WEAK_BONDING,//,STRONG_BONDING // can be modified according to product
-        .pid = 156, //,930 // product id, can be modified according to product
+        .pid = PRODUCT_ID, //,930 // product id, can be modified according to product
         .version = "0000",  // can be modified according to product
 };
 
@@ -313,9 +313,6 @@ static void services_init(void)
 
        err_code = ble_yy_service_init(&yys_init, &yy_init);
        APP_ERROR_CHECK(err_code);*/
-     
-    mible_server_info_init(&dev_info, MODE_STANDARD);
-    mible_server_miservice_init();
 
 }
 
@@ -577,12 +574,12 @@ static void advertising_init(void)
 {
     MI_LOG_INFO("advertising init...\n");
     mibeacon_frame_ctrl_t frame_ctrl = {
-    .time_protocol = 0,
+    //.time_protocol = 0,
     .is_encrypt = 0,
     .mac_include = 1,
     .cap_include = 1,
     .obj_include = 0,
-    .bond_confirm = 0,
+    .bond_confirm = 1,
     .version = 0x03,
     };
     mibeacon_capability_t cap = {.connectable = 1,
@@ -699,6 +696,28 @@ static void gatt_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
+#include "mible_beacon.h"
+static void * gatewaytest_timer;
+static void enqueue_new_objs(void)
+{
+    static int16_t temp;
+    static int16_t hum;
+    static int8_t  battery;
+
+    temp = temp < 500 ? temp + 1 : -500;
+    mibeacon_obj_enque(MI_STA_TEMPERATURE, sizeof(temp), &temp);
+
+    hum = hum < 1000 ? hum + 1 : 0;
+    mibeacon_obj_enque(MI_STA_HUMIDITY, sizeof(hum), &hum);
+
+    battery = battery < 100 ? battery + 1 : 0;
+    mibeacon_obj_enque(MI_STA_BATTERY, sizeof(battery), &battery);
+}
+static void gatewaytest_handler(void * p_context)
+{
+ enqueue_new_objs();
+}
+
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -725,12 +744,27 @@ int main(void)
     /* <!> mible_record_create() must be called after ble_stack_init(). */
     mible_record_create(0xBEEF,0);	
     services_init();
+		
+		int reg = mible_server_info_init(&dev_info, MODE_STANDARD);
+    mible_server_miservice_init();
     
     // Start execution.
     //application_timers_start();
     advertising_init();
     advertising_start();
-    
+		
+#define BLE_GATEWAY_TEST 1
+#if BLE_GATEWAY_TEST
+if(reg == 1)
+{
+ uint32_t delay_ms=10000;
+ MI_LOG_INFO("start object adv after %d ms\n", delay_ms);
+ mible_timer_create(&gatewaytest_timer,gatewaytest_handler,MIBLE_TIMER_REPEATED);
+ mible_timer_start(gatewaytest_timer,delay_ms,NULL);
+}
+#endif
+
+
     // Enter main loop.
     for (;;)
     {
