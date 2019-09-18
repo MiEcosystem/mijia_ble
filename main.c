@@ -161,6 +161,31 @@ static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        
 static void std_authen_event_cb(mible_std_auth_evt_t evt,
         mible_std_auth_evt_param_t* param);
 
+#define REMOTE_CONTROL_DEMO 0
+
+#if REMOTE_CONTROL_DEMO
+
+static mible_op_mode_t MIBLE_FUNCTION = MODE_REMOTE;
+#define BLE_GATEWAY_TEST 0
+//Push Button2 -- FAST_PAIR Advertising last time -- 5s
+#define ADV_FAST_PAIR_TIME 5000
+//Push Button3/Button4 -- OBJECTS Advertising last time -- 0.5s
+#define ADV_OBJECTS_TIME 500
+//Advertising interval time -- 30ms
+#define ADV_INTERVAL_TIME 20
+
+static void* button_timer;
+static void* fastpair_timer;
+
+extern void mible_gap_address_set(void);
+
+#else
+
+static mible_op_mode_t MIBLE_FUNCTION = MODE_STANDARD;
+#define BLE_GATEWAY_TEST 1
+
+#endif
+
 /*app variable*/
 device_info dev_info = {
         .bonding = WEAK_BONDING,//,STRONG_BONDING // can be modified according to product
@@ -533,7 +558,111 @@ static void ble_stack_init(void)
 
     // Register a handler for BLE events.
     NRF_SDH_BLE_OBSERVER(m_ble_observer, APP_BLE_OBSERVER_PRIO, ble_evt_handler, NULL);
+
+#if REMOTE_CONTROL_DEMO
+    // This is a demo. A real product must has a valid public address.
+    //mible_gap_address_set();
+#endif
 }
+
+#if REMOTE_CONTROL_DEMO
+static void push_key_mibeacon(uint8_t key)
+{
+    mible_timer_stop(button_timer);
+    
+    mibeacon_obj_t pushObj = {.type = MI_STA_BUTTON,
+                              .len = 3,
+                              .val[0] = 0x00,
+                              .val[1] = 0x00,
+                              .val[2] = key,};
+            
+    uint32_t errno;
+
+    uint8_t adv_data[31];
+    uint8_t adv_dlen = 0;
+
+    mibeacon_config_t beacon_cfg = {
+            .frame_ctrl.version = 3,
+            .frame_ctrl.is_encrypt = 1,
+            .pid = dev_info.pid, //156, //beacon_nonce.pid,
+            .p_obj = &pushObj,
+            .obj_num = 1,
+        };
+
+    //mible_manu_data_set(&beacon_cfg, adv_data, &adv_dlen);
+    mible_service_data_set(&beacon_cfg, adv_data, &adv_dlen);
+    MI_LOG_HEXDUMP(adv_data, adv_dlen);
+    MI_LOG_INFO("mibeacon event adv ...\n");
+    errno = mible_gap_adv_data_set( adv_data, adv_dlen, NULL, 0);
+    MI_ERR_CHECK(errno);
+    
+    mible_timer_start(button_timer, ADV_OBJECTS_TIME, NULL);
+}
+
+static void ble_fastpair_event(void)
+{
+    mible_timer_stop(fastpair_timer);
+    
+    MI_LOG_INFO("ble_fastpair advertising init...\n");
+    mibeacon_frame_ctrl_t frame_ctrl = {
+        //.time_protocol = 0,
+        .is_encrypt = 0,
+        .mac_include = 1,
+        .cap_include = 1,
+        .obj_include = 1,
+        .bond_confirm = 0,
+        .version = 0x04,
+    };
+    mibeacon_capability_t cap = {.connectable = 1,
+                                 .encryptable = 1,
+                                 .bondAbility = 1};
+
+    mible_addr_t dev_mac;
+    mible_gap_address_get(dev_mac);
+                                                                
+    mibeacon_obj_t fastpair_obj = {.type = MI_EVT_SIMPLE_PAIR,
+                                   .len = 2,
+                                   .val[0] = 0x01,
+                                   .val[1] = 0x10,};
+    
+    mibeacon_config_t mibeacon_cfg = {
+        .frame_ctrl = frame_ctrl,
+        .pid =dev_info.pid,
+        .p_mac = (mible_addr_t*)dev_mac, 
+        .p_capability = &cap,
+        .p_obj = (mibeacon_obj_t*)&fastpair_obj,
+        .obj_num = 1,
+    };
+    
+    uint8_t service_data[31];
+    uint8_t service_data_len = 0;
+    
+    if(MI_SUCCESS != mible_service_data_set(&mibeacon_cfg, service_data, &service_data_len)){
+        MI_LOG_ERROR("mibeacon_data_set failed. \r\n");
+        return;
+    }
+    
+    uint8_t adv_data[23]={0};
+    uint8_t adv_len=0;
+    // add flags
+    adv_data[0] = 0x02;
+    adv_data[1] = 0x01;
+    adv_data[2] = 0x06;
+    
+    memcpy(adv_data+3, service_data, service_data_len);
+    adv_len = service_data_len + 3;
+    
+    mible_gap_adv_data_set(adv_data,adv_len,NULL,0);
+    
+    MI_LOG_INFO("fastpair adv data:");
+    MI_LOG_HEXDUMP(adv_data, adv_len);
+    MI_PRINTF("\r\n");
+        
+    mible_timer_start(fastpair_timer, ADV_FAST_PAIR_TIME, NULL);
+        
+    return;
+}
+#endif
 
 /**@brief Function for handling events from the BSP module.
  *
@@ -562,6 +691,24 @@ static void bsp_event_handler(bsp_event_t event)
 
             break; // BSP_EVENT_KEY_0
 
+#if REMOTE_CONTROL_DEMO				
+				case BSP_EVENT_KEY_0:
+						MI_LOG_INFO("\nBSP_EVENT_KEY_0\n");
+						break;
+				case BSP_EVENT_KEY_1:
+						MI_LOG_INFO("\nBSP_EVENT_KEY_1\n");    
+						//push_key_mibeacon(1);
+						ble_fastpair_event();
+						break;
+				case BSP_EVENT_KEY_2:            
+						MI_LOG_INFO("\nBSP_EVENT_KEY_2\n");
+						push_key_mibeacon(2);
+						break;
+				case BSP_EVENT_KEY_3:
+						MI_LOG_INFO("\nBSP_EVENT_KEY_3\n");
+						push_key_mibeacon(3);
+						break;
+#endif
         default:
             break;
     }
@@ -579,8 +726,8 @@ static void advertising_init(void)
     .mac_include = 1,
     .cap_include = 1,
     .obj_include = 0,
-    .bond_confirm = 1,
-    .version = 0x03,
+    .bond_confirm = 0,
+    .version = 0x04,
     };
     mibeacon_capability_t cap = {.connectable = 1,
                                 .encryptable = 1,
@@ -661,8 +808,14 @@ static void power_manage(void)
 void advertising_start(void){
     mible_gap_adv_param_t adv_param =(mible_gap_adv_param_t){
         .adv_type = MIBLE_ADV_TYPE_CONNECTABLE_UNDIRECTED,
+#if REMOTE_CONTROL_DEMO
+        //Advertising interval in 625 us units.
+        .adv_interval_min = ADV_INTERVAL_TIME/0.625, //MSEC_TO_UNITS(100, UNIT_0_625_MS),
+        .adv_interval_max = 50/0.625,                //MSEC_TO_UNITS(200, UNIT_0_625_MS),
+#else			
         .adv_interval_min = MSEC_TO_UNITS(100, UNIT_0_625_MS),
         .adv_interval_max = MSEC_TO_UNITS(200, UNIT_0_625_MS),
+#endif
         .ch_mask = {0},
     };
     if(MI_SUCCESS != mible_gap_adv_start(&adv_param)){
@@ -696,6 +849,7 @@ static void gatt_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
+#if BLE_GATEWAY_TEST
 #include "mible_beacon.h"
 static void * gatewaytest_timer;
 static void enqueue_new_objs(void)
@@ -717,6 +871,7 @@ static void gatewaytest_handler(void * p_context)
 {
  enqueue_new_objs();
 }
+#endif
 
 /**@brief Function for application main entry.
  */
@@ -745,7 +900,7 @@ int main(void)
     mible_record_create(0xBEEF,0);	
     services_init();
 		
-		int reg = mible_server_info_init(&dev_info, MODE_STANDARD);
+		int reg = mible_server_info_init(&dev_info, /*MODE_STANDARD*/MIBLE_FUNCTION);
     mible_server_miservice_init();
     
     // Start execution.
@@ -753,7 +908,22 @@ int main(void)
     advertising_init();
     advertising_start();
 		
-#define BLE_GATEWAY_TEST 1
+#if REMOTE_CONTROL_DEMO
+    mible_status_t ret = mible_timer_create(&button_timer, (mible_handler_t)advertising_init, MIBLE_TIMER_SINGLE_SHOT);
+    if(ret != MI_SUCCESS){
+        MI_LOG_ERROR("button_timer_create failed. code = %x .\r\n",ret);
+    }else{
+        MI_LOG_DEBUG("button_timer_create success. \r\n");
+    }      		
+		
+    ret = mible_timer_create(&fastpair_timer, (mible_handler_t)advertising_init, MIBLE_TIMER_SINGLE_SHOT);
+    if(ret != MI_SUCCESS){
+        MI_LOG_ERROR("fastpair_timer_create failed. code = %x .\r\n",ret);
+    }else{
+        MI_LOG_DEBUG("fastpair_timer_create success. \r\n");
+		}
+#endif
+		
 #if BLE_GATEWAY_TEST
 if(reg == 1)
 {
@@ -763,7 +933,6 @@ if(reg == 1)
  mible_timer_start(gatewaytest_timer,delay_ms,NULL);
 }
 #endif
-
 
     // Enter main loop.
     for (;;)
