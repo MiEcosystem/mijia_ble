@@ -179,18 +179,13 @@ static void* fastpair_timer;
 
 extern void mible_gap_address_set(void);
 
-#else
-
-static mible_op_mode_t MIBLE_FUNCTION = MODE_STANDARD;
-#define BLE_GATEWAY_TEST 1
-
 #endif
 
 /*app variable*/
-device_info dev_info = {
+static device_info dev_info = {
         .bonding = WEAK_BONDING,//,STRONG_BONDING // can be modified according to product
-        .pid = PRODUCT_ID, //,930 // product id, can be modified according to product
-        .version = "0000",  // can be modified according to product
+        .pid = PRODUCT_ID,  // product id, can be modified according to product
+        .version = "0001",  // can be modified according to product
 };
 
 /* YOUR_JOB: Declare all services structure your application is using
@@ -495,46 +490,6 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 
 }
 
-
-/**@brief Function for dispatching a BLE stack event to all modules with a BLE stack event handler.
- *
- * @details This function is called from the BLE Stack event interrupt handler after a BLE stack
- *          event has been received.
- *
- * @param[in] p_ble_evt  Bluetooth stack event.
- */
-//static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
-//{
-//    /** The Connection state module has to be fed BLE events in order to function correctly
-//     * Remember to call ble_conn_state_on_ble_evt before calling any ble_conns_state_* functions. */
-//    ble_conn_state_on_ble_evt(p_ble_evt);
-//    ble_conn_params_on_ble_evt(p_ble_evt);
-//    mible_on_ble_evt(p_ble_evt);
-//    bsp_btn_ble_on_ble_evt(p_ble_evt);
-//    on_ble_evt(p_ble_evt);
-//    /*YOUR_JOB add calls to _on_ble_evt functions from each service your application is using
-//    pm_on_ble_evt(p_ble_evt);
-
-//       ble_yys_on_ble_evt(&m_yys, p_ble_evt);
-//     */
-//}
-
-/**@brief Function for dispatching a system event to interested modules.
- *
- * @details This function is called from the System event interrupt handler after a system
- *          event has been received.
- *
- * @param[in] sys_evt  System stack event.
- */
-//static void sys_evt_dispatch(uint32_t sys_evt)
-//{
-    // Dispatch the system event to the fstorage module, where it will be
-    // dispatched to the Flash Data Storage (FDS) module.
-//    fs_sys_event_handler(sys_evt);
-
-//}
-
-
 /**@brief Function for initializing the BLE stack.
  *
  * @details Initializes the SoftDevice and the BLE event interrupt.
@@ -605,7 +560,6 @@ static void ble_fastpair_event(void)
     
     MI_LOG_INFO("ble_fastpair advertising init...\n");
     mibeacon_frame_ctrl_t frame_ctrl = {
-        //.time_protocol = 0,
         .is_encrypt = 0,
         .mac_include = 1,
         .cap_include = 1,
@@ -671,7 +625,7 @@ static void ble_fastpair_event(void)
 static void bsp_event_handler(bsp_event_t event)
 {
     uint32_t err_code;
-
+    static uint8_t battery;
     switch (event)
     {
         case BSP_EVENT_SLEEP:
@@ -687,27 +641,47 @@ static void bsp_event_handler(bsp_event_t event)
             }
             break; // BSP_EVENT_DISCONNECT
 
-        case BSP_EVENT_RESET:
 
-            break; // BSP_EVENT_KEY_0
 
 #if REMOTE_CONTROL_DEMO				
-				case BSP_EVENT_KEY_0:
-						MI_LOG_INFO("\nBSP_EVENT_KEY_0\n");
-						break;
-				case BSP_EVENT_KEY_1:
-						MI_LOG_INFO("\nBSP_EVENT_KEY_1\n");    
-						//push_key_mibeacon(1);
-						ble_fastpair_event();
-						break;
-				case BSP_EVENT_KEY_2:            
-						MI_LOG_INFO("\nBSP_EVENT_KEY_2\n");
-						push_key_mibeacon(2);
-						break;
-				case BSP_EVENT_KEY_3:
-						MI_LOG_INFO("\nBSP_EVENT_KEY_3\n");
-						push_key_mibeacon(3);
-						break;
+        case BSP_EVENT_KEY_0:
+                MI_LOG_INFO("\nBSP_EVENT_KEY_0\n");
+                break;
+        case BSP_EVENT_KEY_1:
+                MI_LOG_INFO("\nBSP_EVENT_KEY_1\n");    
+                ble_fastpair_event();
+                break;
+        case BSP_EVENT_KEY_2:            
+                MI_LOG_INFO("\nBSP_EVENT_KEY_2\n");
+                push_key_mibeacon(2);
+                break;
+        case BSP_EVENT_KEY_3:
+                MI_LOG_INFO("\nBSP_EVENT_KEY_3\n");
+                push_key_mibeacon(3);
+                break;
+#else
+        case BSP_EVENT_KEY_0:
+            MI_LOG_WARNING("mibeacon seqnum reset\n");
+            test_mibeacon_sn_reset();
+            break;
+
+        case BSP_EVENT_KEY_1:
+            battery = battery < 100 ? battery + 1 : 0;
+            test_mibeacon_obj_enque(MI_STA_BATTERY, sizeof(battery), &battery, 4);
+            MI_LOG_WARNING("enque cipher mibeacon v4 contains battery state.\n");
+            break;
+
+        case BSP_EVENT_KEY_2:
+            battery = battery < 100 ? battery + 1 : 0;
+            test_mibeacon_obj_enque(MI_STA_BATTERY, sizeof(battery), &battery, 5);
+            MI_LOG_WARNING("enque cipher mibeacon v5 contains battery state.\n");
+            break;
+
+        case BSP_EVENT_KEY_3:
+            battery = battery < 100 ? battery + 1 : 0;
+            test_mibeacon_plain_obj_enque(MI_STA_BATTERY, sizeof(battery), &battery);
+            MI_LOG_WARNING("enque plain mibeacon v5 contains battery state.\n");
+            break;
 #endif
         default:
             break;
@@ -777,19 +751,37 @@ static void advertising_init(void)
  */
 static void buttons_leds_init(bool * p_erase_bonds)
 {
-      uint32_t err_code;
-    bsp_event_t startup_event;
+    uint32_t err_code;
 
-    err_code = bsp_init(BSP_INIT_LEDS | BSP_INIT_BUTTONS,
-                                 //APP_TIMER_TICKS(100), //APP_TIMER_PRESCALER),
-                                 bsp_event_handler);
-
+    err_code = bsp_init(BSP_INIT_LEDS | BSP_INIT_BUTTONS, bsp_event_handler);
     APP_ERROR_CHECK(err_code);
 
-    err_code = bsp_btn_ble_init(NULL, &startup_event);
+    err_code = bsp_btn_ble_init(NULL, NULL);
     APP_ERROR_CHECK(err_code);
 
-    *p_erase_bonds = (startup_event == BSP_EVENT_CLEAR_BONDING_DATA);
+    /* assign BUTTON 1 to reset, for more details to check bsp_event_handler()*/
+    err_code = bsp_event_to_button_action_assign(0,
+                                             BSP_BUTTON_ACTION_LONG_PUSH,
+                                             BSP_EVENT_KEY_0);
+    APP_ERROR_CHECK(err_code);
+
+    /* assign BUTTON 2 to invoke mibeacon v4, for more details to check bsp_event_handler()*/
+    err_code = bsp_event_to_button_action_assign(1,
+                                             BSP_BUTTON_ACTION_PUSH,
+                                             BSP_EVENT_KEY_1);
+    APP_ERROR_CHECK(err_code);
+
+    /* assign BUTTON 3 to invoke mibeacon v5, for more details to check bsp_event_handler()*/
+    err_code = bsp_event_to_button_action_assign(2,
+                                             BSP_BUTTON_ACTION_PUSH,
+                                             BSP_EVENT_KEY_2);
+    APP_ERROR_CHECK(err_code);
+
+    /* assign BUTTON 4 to invoke mibeacon v5 encrypt, for more details to check bsp_event_handler()*/
+    err_code = bsp_event_to_button_action_assign(3,
+                                             BSP_BUTTON_ACTION_PUSH,
+                                             BSP_EVENT_KEY_3);
+    APP_ERROR_CHECK(err_code);
 }
 
 
@@ -812,7 +804,7 @@ void advertising_start(void){
         //Advertising interval in 625 us units.
         .adv_interval_min = ADV_INTERVAL_TIME/0.625, //MSEC_TO_UNITS(100, UNIT_0_625_MS),
         .adv_interval_max = 50/0.625,                //MSEC_TO_UNITS(200, UNIT_0_625_MS),
-#else			
+#else
         .adv_interval_min = MSEC_TO_UNITS(100, UNIT_0_625_MS),
         .adv_interval_max = MSEC_TO_UNITS(200, UNIT_0_625_MS),
 #endif
@@ -849,30 +841,6 @@ static void gatt_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
-#if BLE_GATEWAY_TEST
-#include "mible_beacon.h"
-static void * gatewaytest_timer;
-static void enqueue_new_objs(void)
-{
-    static int16_t temp;
-    static int16_t hum;
-    static int8_t  battery;
-
-    temp = temp < 500 ? temp + 1 : -500;
-    mibeacon_obj_enque(MI_STA_TEMPERATURE, sizeof(temp), &temp);
-
-    hum = hum < 1000 ? hum + 1 : 0;
-    mibeacon_obj_enque(MI_STA_HUMIDITY, sizeof(hum), &hum);
-
-    battery = battery < 100 ? battery + 1 : 0;
-    mibeacon_obj_enque(MI_STA_BATTERY, sizeof(battery), &battery);
-}
-static void gatewaytest_handler(void * p_context)
-{
- enqueue_new_objs();
-}
-#endif
-
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -888,19 +856,17 @@ int main(void)
     ble_stack_init();
     gap_params_init();
     gatt_init();
-        
     time_init(NULL);
     buttons_leds_init(&erase_bonds);  
     conn_params_init();
     
-    
     mible_std_auth_evt_register(std_authen_event_cb);
 
     /* <!> mible_record_create() must be called after ble_stack_init(). */
-    mible_record_create(0xBEEF,0);	
+    mible_record_create(0xBEEF, 0);
     services_init();
-		
-		int reg = mible_server_info_init(&dev_info, /*MODE_STANDARD*/MIBLE_FUNCTION);
+	
+    int is_registered = mible_server_info_init(&dev_info, MODE_STANDARD);
     mible_server_miservice_init();
     
     // Start execution.
@@ -922,16 +888,6 @@ int main(void)
     }else{
         MI_LOG_DEBUG("fastpair_timer_create success. \r\n");
 		}
-#endif
-		
-#if BLE_GATEWAY_TEST
-if(reg == 1)
-{
- uint32_t delay_ms=10000;
- MI_LOG_INFO("start object adv after %d ms\n", delay_ms);
- mible_timer_create(&gatewaytest_timer,gatewaytest_handler,MIBLE_TIMER_REPEATED);
- mible_timer_start(gatewaytest_timer,delay_ms,NULL);
-}
 #endif
 
     // Enter main loop.
