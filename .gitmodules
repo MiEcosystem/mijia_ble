@@ -4,3 +4,6 @@
 [submodule "mijia_ble_libs/common"]
 	path = mijia_ble_libs/common
 	url = https://github.com/MiEcosystem/mijia_ble_common.git
+[submodule "mijia_ble_libs/mible_app_authen"]
+	path = mijia_ble_libs/mible_app_authen
+	url = git@v9.git.n.xiaomi.com:miot_embedded/mible_app_authen.git

@@ -184,6 +184,7 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
+            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -3256,9 +3257,24 @@
           <GroupName>mijia_ble_libs/mible_app_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FilePath>
+              <FileName>mible_crypto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_crypto.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_FSM.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_ll_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_ll_callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_server.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3448,6 +3464,7 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
+            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -6418,9 +6435,24 @@
           <GroupName>mijia_ble_libs/mible_app_authen</GroupName>
           <Files>
             <File>
-              <FileName>mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mijia_std_authen_keil_nrf_1_1_4_752fc700.lib</FilePath>
+              <FileName>mible_crypto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_crypto.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_FSM.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_ll_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_ll_callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>mible_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\mijia_ble_libs\mible_app_authen\mible_server.c</FilePath>
             </File>
           </Files>
         </Group>
