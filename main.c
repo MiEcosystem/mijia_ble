@@ -404,26 +404,6 @@ static void conn_params_init(void)
 //}
 
 
-/**@brief Function for putting the chip into sleep mode.
- *
- * @note This function will not return.
- */
-static void sleep_mode_enter(void)
-{
-    uint32_t err_code = bsp_indication_set(BSP_INDICATE_IDLE);
-
-    APP_ERROR_CHECK(err_code);
-
-    // Prepare wakeup buttons.
-    err_code = bsp_btn_ble_sleep_mode_prepare();
-    APP_ERROR_CHECK(err_code);
-
-    // Go to system-off mode (this function will not return; wakeup will cause a reset).
-    err_code = sd_power_system_off();
-    APP_ERROR_CHECK(err_code);
-}
- 
-
 void mible_on_ble_evt(ble_evt_t const *p_ble_evt);
 
 
@@ -628,10 +608,6 @@ static void bsp_event_handler(bsp_event_t event)
     static uint8_t battery;
     switch (event)
     {
-        case BSP_EVENT_SLEEP:
-            sleep_mode_enter();
-            break; // BSP_EVENT_SLEEP
-
         case BSP_EVENT_DISCONNECT:
             err_code = sd_ble_gap_disconnect(m_conn_handle,
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
@@ -761,7 +737,7 @@ static void buttons_leds_init(bool * p_erase_bonds)
 
     /* assign BUTTON 1 to reset, for more details to check bsp_event_handler()*/
     err_code = bsp_event_to_button_action_assign(0,
-                                             BSP_BUTTON_ACTION_LONG_PUSH,
+                                             BSP_BUTTON_ACTION_PUSH,
                                              BSP_EVENT_KEY_0);
     APP_ERROR_CHECK(err_code);
 
